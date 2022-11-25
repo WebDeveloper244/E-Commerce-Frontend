@@ -1,0 +1,21 @@
+<mat-toolbar >
+    <mat-toolbar-row class="d-flex justify-content-between" >
+        <button mat-icon-button (click)="toggleSidebar()"><mat-icon class="iconColor">menu</mat-icon></button>
+        <div class="me-2 ms-auto">
+            <ul>
+                <li>
+                    <button [matMenuTriggerFor]="menu" class="user mt-2 d-flex align-items-center">
+                        <img src="https://images-platform.99static.com/wWXwLmgRsHzu_t-73IISLgr1AxY=/572x3395:1257x4080/500x500/top/smart/99designs-contests-attachments/132/132674/attachment_132674120" class="rounded1" width="40px" height="40px" alt="" srcset="">
+                        <mat-icon class="user-image-icon">keyboard_arrow_down</mat-icon>
+                      </button>
+                      <mat-menu #menu="matMenu">
+                        <button mat-menu-item>
+                          <mat-icon>logout</mat-icon>
+                          Logout
+                        </button>
+                      </mat-menu>
+                </li>
+            </ul> 
+        </div>
+    </mat-toolbar-row>
+  </mat-toolbar>

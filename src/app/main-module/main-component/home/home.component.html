@@ -1,0 +1,217 @@
+<div class="bg-img">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 ">
+                <h1 class="text-white banner-heading">Mens 
+                    FootWear <span style="color: red;" >Shoes</span> </h1>
+                    <h3 class="banner-heading2">Winter Fashion</h3>
+                     <!-- HTML !-->
+        <button class="button-1" role="button"><span class="text">Explore</span><span>Products</span></button>
+    
+            </div>
+            <div class="col-md-6 col-sm-12">
+               <div class="banner-img"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <!------------------------------------------------------------------------------- Quality-Section  -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mt-5">
+                <div class="first-section card1">
+                    <img src="../../../../assets/van.png"  alt="" srcset="">
+                    <h4 style="color: red;">Free Shipping</h4>
+                </div>
+            </div>
+            <div class="col-md-4 mt-5">
+                <div class="second-section card1">
+                    <img src="../../../../assets/customer-service.png"  alt="" srcset="">
+                    <h4 style="color: red;">24/7 Facilities</h4>
+                </div>
+            </div>
+            <div class="col-md-4 mt-5">
+                <div class="third-section card1">
+                    <img src="../../../../assets/money.png" alt="" srcset="">
+                    <h4 style="color: red;">Money-Back Gurrenty</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!------------------------------------------------------------------------------- select section  -->
+    <section class="category">
+        <div class="container">
+            <div class="title text-center mt-5">
+               <h2> Our Products</h2>
+            </div>
+            <div class="row">
+                <div class="col-xl-3">
+                    <div>
+                        <aside class="side-area product-side side-shadow mt-5">
+                            <div class="side-title">
+                                <h3>Product-Categories</h3> 
+                            </div>
+                            <div class="side-content">
+                                <div class="list">
+                                    <h4 class="ms-3">Filter by Brand</h4>
+                                    <!-- <a routerLink="">Nike</a>
+                                    <a routerLink="">Adidas</a>
+                                    <a routerLink="">Rolex</a> -->
+                                    <div class="mb-1 ms-5 form-check">
+                                      <input type="checkbox" class="form-check-input" id="check1" (click)="getproductName(ProductArray.Adidas)"/>
+                                      <label class="form-check-label" for="check1">Levis</label>
+                                    </div>
+                                    <div class="mb-1 ms-5 form-check">
+                                      <input type="checkbox" class="form-check-input" id="check1"/>
+                                      <label class="form-check-label" for="check1">Nike</label>
+                                    </div>
+                                    <div class="mb-1 ms-5 form-check">
+                                      <input type="checkbox" class="form-check-input" id="check1"/>
+                                      <label class="form-check-label" for="check1">Adidas</label>
+                                    </div>
+                                    <div class="mb-1 ms-5 form-check">
+                                      <input type="checkbox" class="form-check-input" id="check1"/>
+                                      <label class="form-check-label" for="check1">Rolex</label>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <h4 class="ms-3">Filter by Price</h4>
+                                   <div class="container-fluid">
+                                    <input type="range" class="form-range" min="0" max="100" id="customRange2">
+                                   </div> 
+                      </div>
+                      <div class="list">
+                        <h4 class="ms-3">News Letter Sign-Up</h4>
+                     <form action="">
+                        <div class="mb-3">
+                            <label for="input1" class="form-label ms-3">Email</label>
+                            <input type="email" class="form-control" id="input1" aria-describedby="emailHelp" >
+                          </div>
+                          <button type="submit" class="btn ms-3">Subscribe</button>
+                     </form>
+          </div>
+                    </div>
+                        </aside>
+                    </div>
+                </div>  
+                <!---------------------------------------------------------------------Product-Section --------------------------->
+                <div class="col-xl-9">
+                        <div class="container">
+                             <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-primary" (click)="viewProduct()">list</button>
+                                <button type="button" class="btn btn-primary" (click)="viewProduct1()">grid</button>
+                              </div>
+                              <!--------------------------------------------------------------------- Product-View-1 ---------------------------> 
+                            <div class="row"> 
+                                <div class="col-lg-4 col-md-6 d-flex justify-content-center" *ngFor="let item of ProductArray | paginate: { itemsPerPage: 8, currentPage: p }">
+                                    <div class="wrapper" *ngIf="productView === true">
+                                        <div class="card card1" style="width: 18rem;" >
+                                            <img [src]="Url+item.ProductImages[1].ProductImageUrl" class="card-img-top cardImg1" alt="...">
+                                            <span class="card-title card-title">{{item.productName}}</span>
+                                            <div class="card-body">
+                                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                              <a href="#" class="btn btn-primary">View-Cart</a>
+                                              <i class="fa-sharp fa-solid fa-cart-shopping red pointer" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        </div>
+                                         <!--------------------------------------------------------------------- Product-View-2 ---------------------------> 
+                                         <div class="col-lg-6 d-flex justify-content-center" *ngFor="let item of ProductArray | paginate: { itemsPerPage: pageItem, currentPage: p }">
+                                            <div class="wrapper" *ngIf="productView === false">
+                                            <div class="card card1 mb-3" style="max-width: 540px;">
+                                                <div class="row g-0">
+                                                  <div class="col-md-4">
+                                                    <img  [src]="Url+item.ProductImages[1].ProductImageUrl" class="img-fluid img1" alt="...">
+                                                  </div>
+                                                  <div class="col-md-8">
+                                                    <div class="card-body">
+                                                        <span class="card-title1">{{item.productName}}</span>
+                                                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                      <button class="btn btn-primary" (click)="reDirectSingleProductPage(item._id)" >View-Cart</button>
+                                                      
+                                                      <i class="fa-sharp fa-solid fa-cart-shopping red pointer" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              </div>
+                                        </div>
+    
+                    <div class="mt-5 text-center">
+                        <pagination-controls class="my-pagination" (pageChange)="p = $event"></pagination-controls>
+                    </div>
+                        </div>
+                        </div>
+    
+                </div>
+                
+                </div>
+        </div>
+    </section>
+     <!--------------------------------------------------------------------- OffCanvas-Section --------------------------->
+     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          ...
+        </div>
+      </div>
+    
+     <!--------------------------------------------------------------------- Discount-Section --------------------------->
+    
+    <div class="bannerColor">
+     <div class="container">
+        <div class="row">
+                <div class="col-md-8" >
+                    <div class="text">
+                        <h1 class="bannerText text-white">Up to <span>70% Off</span> All T-Shirt and Products</h1>
+                        <button class="button-1" role="button"><span class="text">Explore</span><span>Products</span></button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="bannerImage"></div>
+                </div>
+            </div>
+        </div>
+     </div>
+     <!--------------------------------------------------------------------- Feature-New-Product --------------------------->
+    
+     <div class="container">
+        <div class="title text-center mt-5">
+            <h2>Up-Comming Products</h2>
+         </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card imageCard1 text-white mb-5">
+                    <div class="card-img-overlay">
+                      <div class="text">
+                        <h1 class="bannerText text-white mb-5"><span>Up-Next</span> New Arrival for Mens</h1>
+                        <button class="button-1" role="button"><span class="text">Explore</span><span>Products</span></button>
+                    </div>
+                    </div>
+                  </div>
+            </div>
+                <div class="col-md-6">
+                    <div class="card imageCard2 text-white mb-5">
+                        <div class="card-img-overlay">
+                          <div class="text">
+                            <h1 class="bannerText text-white mb-5"><span>Up-comming</span> Mens Different Products</h1>
+                            <button class="button-1  btnindex " role="button"><span class="text">Explore</span><span>Products</span></button>
+                        </div>
+                        </div>
+                      </div>
+                </div>
+        </div>
+     </div>
+    
+    <!--------------------------------------------------------------------- Feature-New-Product --------------------------->
+
+    
+    
+    
+    

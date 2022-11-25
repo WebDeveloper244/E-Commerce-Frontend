@@ -1,0 +1,105 @@
+.banner::before{
+    content: " ";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background-color: rgba(176, 49, 49, 0.54);
+}
+
+.banner{
+height: 50vh;
+width: 100%;
+background-image: url("../../../../assets/sec-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    margin-top: -93px;
+}
+.content{
+    z-index: 2;
+}
+.content>h3{
+    padding-top: 10%;
+    margin-left: 41%;
+    color: white;
+    font-size: 68px;
+    font-family: Roboto, HelveticaNeue, Arial, sans-serif;
+    font-weight: bold;
+}
+.content>h3::after{
+    content: " ";
+    display: block;
+    height: 4px;
+    width: 32%;
+    background-color: red;
+}
+/**************************************************************************** content-responsive  */
+@media (max-width:1199px) {
+    .content>h3{
+        padding-top: 18%;
+        margin-left: 38%;
+        color: white;
+        font-size: 58px;
+    }
+}
+@media (max-width:991px) {
+         .content>h3{
+            padding-top: 16%;
+            margin-left: 35%;
+            color: white;
+            font-size: 48px;
+    }
+}
+@media (max-width:767px) {
+    .content>h3{
+        padding-top: 23%;
+        margin-left: 36%;
+        color: white;
+        font-size: 52px;
+    }
+}
+@media (max-width:567px) {
+    .content>h3{
+        padding-top: 35%;
+        margin-left: 30%;
+        color: white;
+        font-size: 44px;
+    }
+}
+/**************************************************************************** content-responsive  */
+/* .text{
+    margin-top: 20%;
+} */
+.text>h3{
+    font-family: 'Poppins';
+    font-size: 45px;
+    font-weight: 900;
+
+}
+.btn{
+    background: rgb(255, 255, 255);
+    color: rgb(255, 0, 0);
+    border-radius: 0%;
+    border-color: red;
+}
+.btn:hover{
+    background: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 0%;
+}
+.btn:focus{
+    box-shadow: none;
+}
+input{
+    border-radius: 0%;
+}
+input:focus{
+    box-shadow: none
+}
+textarea:focus{
+box-shadow: none;
+border-color: aqua;
+}

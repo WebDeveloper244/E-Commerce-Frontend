@@ -1,0 +1,54 @@
+mt-toolbar{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+ul>li{
+list-style-type: none;
+}
+button{
+    border: 0;
+    outline: none;
+    background:transparent ;
+}.user{
+    font-size: 16px;
+}
+.user-image{
+    border-radius: 50%;
+    width: 50%;
+    height: 50%;
+}
+.user-image-icon{
+    height: 28px;
+    font-size: 27px;
+}
+mt-toolbar{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+ul>li{
+list-style-type: none;
+}
+button{
+    border: 0;
+    outline: none;
+    background:transparent ;
+}.user{
+    font-size: 16px;
+}
+.user-image{
+    border-radius: 50%;
+    width: 50%;
+    height: 50%;
+}
+.user-image-icon{
+    height: 25px;
+    font-size: 27px;
+}
+::ng-deep .mat-menu-content{
+        width: 160px;
+    }
+    .rounded1{
+        border-radius: 50%;
+    }

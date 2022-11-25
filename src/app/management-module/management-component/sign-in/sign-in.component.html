@@ -1,0 +1,58 @@
+<body>
+    <div class="login-box">
+        <h2>Login</h2>
+        <form (ngSubmit)="SubmitLoginForm()" [formGroup]="LoginForm" >
+  
+          <!----------------------------------------------------------------------------------------------------------------  -->
+          <div class="user-box">
+            <input type="email" name="" required="" formControlName="email">
+            <label>Email</label>
+          </div>
+  
+          <div class="error  text-danger"
+          *ngIf="LoginForm.controls['email'].invalid && (LoginForm.controls['email'].dirty || LoginForm.controls['email'].touched)">
+          <span *ngIf="LoginForm.controls['email'].errors.required">
+            <small>Field Required!</small>
+          </span>
+  
+          <span *ngIf="LoginForm.controls['email'].errors.email">
+            <small>Enter Valid Email</small>
+          </span>
+          </div>
+  <!----------------------------------------------------------------------------------------------------------------  -->
+          <div class="user-box">
+            <input [type]="hide ? 'password' : 'text'" class="input1" maxlength="8" required="" autocomplete="off" formControlName="password" #input>
+            <small class="text-white d-flex justify-content-end" >{{input.value.length}}/8</small>
+            <span *ngIf="hide === false" type="button" class="text-white fontIcon" (click)="toogle()" ><i class="fa-solid fa-eye"></i></span>
+            <span  *ngIf="hide === true" type="button" class="text-white fontIcon" (click)="toogle()" ><i class="fa-solid fa-eye-slash"></i></span>
+            <label>Password</label>
+          </div>
+  
+          <div class="error  text-danger"
+          *ngIf="LoginForm.controls['Password'].invalid && (LoginForm.controls['Password'].dirty || LoginForm.controls['Password'].touched)">
+          <span *ngIf="LoginForm.controls['Password'].errors.required">
+            <small>Field Required!</small>
+          </span>
+        </div>
+  
+  <!----------------------------------------------------------------------------------------------------------------  -->
+          <div class="user-box  mt-5">
+            <!-- <input type="password" name="" required="" formControlName="CPassword">
+            <label>Conform-Password</label> -->
+          
+            <small class="text-white">If you are not Register? go to <a routerLink="../sign-up">Register</a></small>
+        </div>
+          <button type="submit" class="btn1">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+          </button>
+         
+        </form>
+        <small class="text-white" style="margin-left:65% ;" >Go to home <a routerLink=""><i class="fa-solid fa-arrow-left-long"></i></a></small>
+      </div>
+  </body>
+  
+  

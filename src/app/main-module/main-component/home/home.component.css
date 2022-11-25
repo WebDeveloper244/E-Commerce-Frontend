@@ -1,0 +1,589 @@
+.bg-img{
+    background-image: linear-gradient(to right,rgb(0, 0, 0),red);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 75vh;
+    margin-top: -91px;
+}
+.banner-img{
+    background-image: url("../../../../assets/img1.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80vh;
+    height: 50vh;
+    margin-top: 122px;
+}
+.banner-heading{
+    font-size: 60px;
+    font-style: italic;
+    /* margin-top: 10vh; */
+    font-weight: 900;
+    font-family: 'Trocchi', serif;
+    margin-top: 137px;
+}
+.banner-heading2{
+    font-size: 40px;
+    font-style: italic;
+    color: #ffffff;
+    /* margin-top: 10vh; */
+    font-weight: 900;
+    font-family: 'Trocchi', serif;
+}
+/* CSS */
+.button-1 {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #18181a;
+    color: #ffffff;
+    display: inline-block;
+    width: 25%;
+    border-radius: 5px;
+    font-size: 15px;
+    line-height: 15px;
+    padding: 18px 18px 17px;
+    text-decoration: none;
+    cursor: pointer;
+    background: rgb(255, 0, 0);
+    /* border-color: rgb(255, 255, 255); */
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-1 span:first-child {
+    position: relative;
+    transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 10;
+  }
+  
+  .button-1 span:last-child {
+    color: rgb(0, 0, 0);
+    display: block;
+    position: absolute;
+    bottom: 0;
+    transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 100;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translateY(225%) translateX(-50%);
+    height: 14px;
+    line-height: 13px;
+  }
+  
+  .button-1:after {
+    content: "";
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    transform-origin: bottom center;
+    transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    transform: skewY(9.3deg) scaleY(0);
+    z-index: 50;
+  }
+  
+  .button-1:hover:after {
+    transform-origin: bottom center;
+    transform: skewY(9.3deg) scaleY(2);
+    width: 100%;
+  }
+  
+  .button-1:hover span:last-child {
+    transform: translateX(-50%) translateY(-100%);
+    opacity: 1;
+    transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+  }
+  @media (max-width: 486px){
+   .button-1{
+     width: 29%;
+   }
+ 
+ }
+  @media (max-width: 437px){
+   .button-1 {
+     width: 38%;
+   }
+ }
+  @media (max-width: 352px){
+   .button-1 {
+     width: 38%;
+   }
+ }
+ /* ****************************************  Banner-Responsive */
+ @media (max-width: 1199px){
+    .bg-img{
+        height: 70vh;
+    }
+    .banner-img{
+        width: 70vh;
+    }
+    .banner-heading{
+        margin-top: 21vh;
+        font-size: 52px;
+    }
+    .banner-heading2{
+        font-size: 38px;
+    }
+ 
+    }
+ @media (max-width: 991px){
+    .bg-img{
+        height: 76vh;
+    }
+    .banner-img{
+        width: 49vh;
+        height: 48vh;
+    }
+    .banner-heading{
+        margin-top: 18vh;
+        font-size: 40px;
+    }
+    .banner-heading2{
+        font-size: 38px;
+    }
+}
+ @media (max-width: 767px){
+    .bg-img{
+        height: 88vh;
+    }
+    .banner-img{
+        width: 55vh;
+        height: 46vh;
+        margin-top: 1px;
+    }
+    .banner-heading{
+        margin-top: 19vh;
+font-size: 41px;
+    }
+    .banner-heading2{
+        font-size: 30px;
+    }
+ 
+    }
+ @media (max-width: 576px){
+    .bg-img{
+        height: 79vh;
+    }
+    .banner-img{
+        width: 51vh;
+        height: 40vh;
+    }
+    .banner-heading{
+        margin-top: 16vh;
+        font-size: 28px;
+    }
+    .banner-heading2{
+        font-size: 30px;
+    }
+ 
+    }
+ @media (max-width: 372px){
+    .bg-img{
+        height: 83vh;
+    }
+    .banner-img{
+        width: 40vh;
+        height: 40vh;
+    }
+    .banner-heading{
+        margin-top: 15vh;
+        font-size: 40px;
+    }
+    .banner-heading2{
+        font-size: 20px;
+    }
+ 
+    }
+
+/* ********************* Default button */
+.red{
+    color: red;
+};
+.pointer{
+    cursor: pointer;
+}
+/**************************************************************** Quality Card */
+.card1{
+    width: 100%;
+}
+.card1>img{
+    width: 16%;
+} 
+/***************************************************************** Quality card responsive  */
+
+    
+
+
+
+
+/* ************************* fontawesome */
+.fa-cart-shopping{
+    margin-left: 94px;
+    font-size: 21px;
+    cursor: pointer;
+}
+.fa-cart-shopping:hover{
+    
+    color: #fff !important;
+    text-shadow:
+    0 0 6px #ff0101	,
+    0 0 6px #ff0101	,
+    0 0 6px #ff0101	,
+    0 0 6px #ff0101	,
+    0 0 6px #ff0101	,
+    0 0 6px #ff0101	;
+   
+      -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+ /* ****************************************  Banner-Responsive */
+ .first-section{
+    border: 3px solid rgb(0, 0, 0);
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+   
+ }
+ .second-section{
+    border: 3px solid rgb(0, 0, 0);
+   font-size: 10px;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+ }
+ .third-section{
+    border: 3px solid rgb(0, 0, 0);
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+ }
+ /**************************************************************************************88  */
+
+ .side-area{
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    display: block;
+}
+.side-area:last-child{
+    margin-bottom: 16px;
+}
+.product-side .side-content{
+    border-bottom: 1px solid #eee;
+}
+.product-side .side-content:last-child{
+    border-bottom: 0px;
+}
+.product-side .list{
+    border-top: 1px solid #ddd;
+    padding-top: 25px;
+    margin-top: 25px;
+    list-style-type: none;
+}
+.side-title>h3{
+    font-family: 'Bree Serif', serif;
+    font-size: 32px;
+}
+.list>h4{
+    font-family: 'Bree Serif', serif;
+}
+.product-side .list:first-child{
+    padding-top: 0;
+    margin-top: 0;
+    border-top: 0px solid transparent;
+}
+.product-side .list li{
+    margin-bottom: 18px;
+    transition: 0.5s;
+}
+.product-side .list a{
+    font-weight: normal;
+    color: #606060;
+    position: relative;
+    text-decoration: none;
+    font-size: 19px;
+    display: block;
+    margin-left: 31px;
+    font-family: 'Poppins', sans-serif;
+}
+.side-shadow{
+    box-shadow: 0px 10px 10px 0px rgba(153,153,153,0.2);
+}
+@media (max-width: 991px){
+    .side-title{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+.side-title h3{
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+    line-height: 40px;
+    position: relative;
+    background: red;
+    padding: 10px 15px 10px 30px;
+    text-transform: uppercase;
+}
+.product-side .list a:hover{
+    
+    color: #fff !important;
+    text-shadow:
+    0 0 6px #ff0101	,
+    0 0 6px #ff0101	,
+    0 0 6px #ff0101	,
+    0 0 6px #ff0101	,
+    0 0 6px #ff0101	,
+    0 0 6px #ff0101	;
+   
+      -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  
+}
+/**************************************************** title-class */
+
+.title>h2{
+color: black;
+font-size: 40px;
+font-family: Roboto, HelveticaNeue, Arial, sans-serif;
+font-weight: bold;
+}
+.title>h2::after{
+content: "";
+display: block;
+width: 10%;
+height: 4px;
+margin: 20px auto;
+background-color: red;
+}
+
+/* **************************** input */
+#input1{
+    width: 86%;
+margin-left: 16px;
+border-radius: 0%;
+}
+#input1:focus{
+    box-shadow: none;
+}
+/* *********************button */
+.btn{
+    background: rgb(255, 255, 255);
+    color: rgb(255, 0, 0);
+    border-radius: 0%;
+    border-color: red;
+}
+.btn:hover{
+    background: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 0%;
+}
+.btn:focus{
+    box-shadow: none;
+}
+/**************************************************** title-class */
+/*********************************************card  */
+.card{
+    margin-top: 45px;
+}
+.card>img{
+    height: 28vh;
+    width: 100%;
+    /* position: absolute; */
+    position: relative;
+}
+.card-title{
+    /* position: relative; */
+    position: absolute; 
+    background-color: red;
+    color: white;
+    width: 70px;
+    margin-left: 68%;
+    margin-top: 10px;
+    text-align: center;
+}
+/*********************************************card 2 */
+.card1{
+    margin-top: 45px;
+    overflow: hidden;
+}
+.img1{
+ max-width: 100%;
+height: 112%;
+}
+.img1{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.card-title1{
+    position: absolute;
+    background-color: red;
+    color: white;
+    width: 70px;
+    margin-left: -164px;
+    margin-top: -9px;
+    text-align: center;
+} 
+
+/******************************** Card-Responsive  */
+@media (max-width: 1199px){
+    /* .side-area{
+       display: none;
+    } */
+  
+/* }
+@media (max-width: 767px){
+    .card{
+        margin-left: 107px;
+    }
+}
+@media (max-width: 567){
+    .card{
+        margin-left: 113px;
+    
+} */
+}
+/******************************** Card-Responsive  */
+@media (max-width: 767px){
+    .img1{
+       width: 100%;
+       height: 100%;
+       }
+}
+
+    /* *************************************************** Pagination */
+    .my-pagination ::ng-deep .ngx-pagination .current {
+        background: red;
+      }
+
+/* *************************************************** Discount-Section */
+.bannerImage{
+background-image: url("../../../../assets/rado.png");
+background-position: center center;
+background-size: cover;
+background-repeat: no-repeat;
+width: 100%;
+height: 44vh;
+}
+.bannerColor{
+    background-image: linear-gradient(#bf0707,#1a1919);
+    height: 44vh;
+    width: 100%;
+}
+.bannerText{
+    margin-top: 12%;
+    font-family: 'Zen Antique', serif;
+    /* font-family: 'Trocchi', serif; */
+    font-style: italic;
+    font-size: 50px;
+    font-weight: bold;
+   
+}
+.bannerText>span{
+    color: red;
+    font-family: 'Island Moments', cursive;
+}
+/*************************** reponsive banner  */
+@media (max-width: 991px){
+    .bannerText{
+        font-size: 44px;
+    }
+}
+@media (max-width: 767px){
+    .bannerColor{
+        background-image: linear-gradient(#bf0707,#1a1919);
+        height: 62vh;
+        width: 100%;
+    }
+    .bannerText{
+        margin-top: 12%;
+        font-size: 21px;
+    }
+    .bannerText>span{
+        color: red;
+        font-family: 'Island Moments', cursive;
+    }
+    .bannerImage{
+       width: 38%;
+height: 33vh;
+        margin-top: 12px;
+        }
+}
+@media (max-width: 567px){
+    .bannerImage{
+        width: 38%;
+        height: 33vh;
+        margin-top: 12px;
+        }
+        .bannerText{
+            margin-top: 12%;
+            font-size: 23px;
+        }
+}
+
+
+/*************************** reponsive banner  */
+
+
+/*
+************************** upcomming products  */
+.imageCard1::before{
+    content: " ";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+    background-color: rgba(0, 0, 0, 0.54);
+}
+
+.imageCard1{
+height: 50vh;
+width: 100%;
+background-image: url("../../../../assets/sunglass2.jpeg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+
+}
+.card-img-overlay{
+    z-index: 2;
+}
+.imageCard2::before{
+    content: " ";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+    background-color: rgba(0, 0, 0, 0.54);
+}
+
+.imageCard2{
+height: 50vh;
+width: 100%;
+background-image: url("../../../../assets/purse1.jpeg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+/* .btnindex{
+    z-index: 5;
+} */
+
+
+/*************************** upcomming products  */
+.offcanvas.show:not(.hiding), .offcanvas.showing{
+    background-color: #0d0d0da3;
+     color: white;
+}

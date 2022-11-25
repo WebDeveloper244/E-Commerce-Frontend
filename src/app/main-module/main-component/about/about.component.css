@@ -1,0 +1,207 @@
+
+.banner::before{
+    content: " ";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background-color: rgba(176, 49, 49, 0.54);
+}
+
+.banner{
+height: 50vh;
+width: 100%;
+background-image: url("../../../../assets/sec-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    margin-top: -93px;
+}
+.content{
+    z-index: 2;
+}
+.content>h3{
+    padding-top: 10%;
+    margin-left: 41%;
+    color: white;
+    font-size: 68px;
+    font-family: Roboto, HelveticaNeue, Arial, sans-serif;
+    font-weight: bold;
+}
+.content>h3::after{
+    content: " ";
+    display: block;
+    height: 4px;
+    width: 28%;
+    background-color: red;
+}
+/**************************************************************************** content-responsive  */
+@media (max-width:1199px) {
+    .content>h3{
+        padding-top: 15%;
+margin-left: 38%;
+color: white;
+font-size: 64px;
+    }
+}
+@media (max-width:991px) {
+    .content>h3{
+        padding-top: 18%;
+        margin-left: 36%;
+        color: white;
+        font-size: 56px;
+    }
+}
+@media (max-width:767px) {
+    .content>h3{
+        padding-top: 23%;
+        margin-left: 36%;
+        color: white;
+        font-size: 52px;
+    }
+}
+/**************************************************************************** next-section  */
+
+.text>h3{
+font-size: 38px;
+font-family: 'DM Serif Display', serif;
+font-weight: bold;
+}ul>li{
+    list-style-type: none;
+}
+.btn{
+    background: rgb(255, 255, 255);
+    color: rgb(255, 0, 0);
+    border-radius: 0%;
+    border-color: red;
+}
+.btn:hover{
+    background: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 0%;
+}
+.btn:focus{
+    box-shadow: none;
+}
+.img{
+    background-image: url('../../../../assets/banner.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 44vh;
+
+}/**************************************************************************** Responsive-section  */
+@media (max-width:991px) {
+    .text>h3{
+        font-size: 31px;
+    }
+    .text>p{
+        font-size: 14px;
+    }
+}
+@media (max-width:767px) {
+  .img{
+    margin-top: 10px;
+  }
+}
+
+/**************************************************************************** next-section  */
+.heading::after{
+    content: " ";
+    display: block;
+    height: 6px;
+    width:37%;
+    background-color: red;
+}
+.heading{ 
+    margin-left: 39%;
+    color: rgb(0, 0, 0);
+    font-size: 68px;
+    font-family: Roboto, HelveticaNeue, Arial, sans-serif;
+    font-weight: bold;
+}
+/**************************************************************** resoponsive heading */
+@media (max-width:1199px) {
+    .heading{
+        margin-left: 37%;
+color: rgb(0, 0, 0);
+font-size: 63px;
+    }
+}
+@media (max-width:991px) {
+    .heading{
+font-size: 50px;
+    }
+}
+@media (max-width:767px) {
+    .heading{
+   font-size: 50px;
+   margin-left: 33%;
+    }
+}
+/**************************************************************** Quality Card */
+.bgcolor{
+    background-color: rgb(251, 251, 251);
+}
+.card1{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.card1>p{
+    font-size: 16px;
+}
+.card1>img{
+    width: 16%;
+    margin-top: 20px;
+} 
+.first-section{
+    border: 3px solid rgb(0, 0, 0);
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    height: 30vh;
+   
+ }
+ .second-section{
+    border: 3px solid rgb(0, 0, 0);
+   font-size: 10px;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    height: 30vh;
+
+ }
+ .third-section{
+    border: 3px solid rgb(0, 0, 0);
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    height: 30vh;
+ }
+ /**************************************************************** Quality Card  Responsive*/
+ @media (max-width:991px) {
+   .card1>h4{
+    font-size: 19px;
+   }
+   .card1>p{
+    font-size: 14px;
+    padding: 4px;
+   }
+   .card1>img{
+    width: 24%;
+    margin-top: 12px;
+} 
+}
+ @media (max-width:767px) {
+   .card1>img{
+    width: 19%;
+    margin-top: 12px;
+} 
+.card1>h4{
+    font-size: 23px;
+   }
+   .card1>p{
+    font-size: 17px;
+    padding: 5px;
+   }
+}

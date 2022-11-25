@@ -1,0 +1,71 @@
+.banner::before{
+    content: " ";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background-color: rgba(176, 49, 49, 0.54);
+}
+
+.banner{
+height: 50vh;
+width: 100%;
+background-image: url("../../../../assets/sec-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    margin-top: -93px;
+}
+.content{
+    z-index: 2;
+}
+.content>h3{
+    padding-top: 11%;
+margin-left: 40%;
+color: white;
+font-size: 61px;
+font-family: Roboto, HelveticaNeue, Arial, sans-serif;
+font-weight: bold;
+}
+.content>h3::after{
+    content: " ";
+    display: block;
+    height: 4px;
+    width: 32%;
+    background-color: red;
+}
+/**************************************************************************** content-responsive  */
+@media (max-width:1199px) {
+    .content>h3{
+        padding-top: 18%;
+margin-left: 40%;
+color: white;
+font-size: 42px;
+    }
+}
+@media (max-width:991px) {
+         .content>h3{
+            padding-top: 22%;
+margin-left: 37%;
+color: white;
+font-size: 40px;
+    }
+}
+@media (max-width:767px) {
+    .content>h3{
+        padding-top: 28%;
+        margin-left: 35%;
+        color: white;
+        font-size: 37px;
+    }
+}
+@media (max-width:567px) {
+    .content>h3{
+        padding-top: 36%;
+        margin-left: 30%;
+        color: white;
+        font-size: 39px;
+    }
+}

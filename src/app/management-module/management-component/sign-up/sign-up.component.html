@@ -1,0 +1,97 @@
+
+ <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="login-box">
+          <h2>Login</h2>
+          <form (ngSubmit)="SubmitRegisterUserForm()" [formGroup]="userRegisterForm" >
+            <div class="user-box">
+              <input type="text" name="" required="" formControlName="firstName">
+              <label>First-Name</label>
+    
+              <div class="error  text-danger"
+              *ngIf="userRegisterForm.controls['firstName'].invalid && (userRegisterForm.controls['firstName'].dirty || userRegisterForm.controls['firstName'].touched)">
+              <span *ngIf="userRegisterForm.controls['firstName'].errors.minlength || userRegisterForm.controls['firstName'].errors.maxlength ">
+                <small>Name between 4 to 20 Characters!</small></span>
+              <span *ngIf="(userRegisterForm.controls['firstName'].errors.pattern)">
+                Only Alphabets & Spaces Allowed</span>
+              <span *ngIf="userRegisterForm.controls['firstName'].errors.required">
+                <small>Field Required!</small>
+              </span>
+            </div> 
+    <!----------------------------------------------------------------------------------------------------------------  -->
+            </div>
+            <div class="user-box">
+              <input type="text" name="" required=""  formControlName="lastName">
+              <label>Last-Name</label>
+    
+              <div class="error  text-danger"
+              *ngIf="userRegisterForm.controls['lastName'].invalid && (userRegisterForm.controls['lastName'].dirty || userRegisterForm.controls['lastName'].touched)">
+              <span *ngIf="userRegisterForm.controls['lastName'].errors.minlength || userRegisterForm.controls['lastName'].errors.maxlength ">
+                <small>Name between 4 to 20 Characters!</small></span>
+              <span *ngIf="(userRegisterForm.controls['lastName'].errors.pattern)">
+                Only Alphabets & Spaces Allowed</span>
+              <span *ngIf="userRegisterForm.controls['lastName'].errors.required">
+                <small>Field Required!</small>
+              </span>
+            </div>
+    
+            </div>
+    
+            <!----------------------------------------------------------------------------------------------------------------  -->
+            <div class="user-box">
+              <input type="email" name="" required="" formControlName="email">
+              <label>Email</label>
+            </div>
+    
+            <div class="error  text-danger"
+            *ngIf="userRegisterForm.controls['email'].invalid && (userRegisterForm.controls['email'].dirty || userRegisterForm.controls['email'].touched)">
+            <span *ngIf="userRegisterForm.controls['email'].errors.required">
+              <small>Field Required!</small>
+            </span>
+    
+            <span *ngIf="userRegisterForm.controls['email'].errors.email">
+              <small>Enter Valid Email</small>
+            </span>
+            </div>
+    <!----------------------------------------------------------------------------------------------------------------  -->
+            <div class="user-box">
+              <input [type]="hide ? 'password' : 'text'" class="input1" maxlength="8" required="" autocomplete="off" formControlName="password" #input>
+              <small class="text-white d-flex justify-content-end" >{{input.value.length}}/8</small>
+              <span *ngIf="hide === false" type="button" class="text-white fontIcon" (click)="toogle()" ><i class="fa-solid fa-eye"></i></span>
+              <span  *ngIf="hide === true" type="button" class="text-white fontIcon" (click)="toogle()" ><i class="fa-solid fa-eye-slash"></i></span>
+              <label>password</label>
+            </div>
+    
+            <div class="error  text-danger"
+            *ngIf="userRegisterForm.controls['password'].invalid && (userRegisterForm.controls['password'].dirty || userRegisterForm.controls['password'].touched)">
+            <span *ngIf="userRegisterForm.controls['password'].errors.required">
+              <small>Field Required!</small>
+            </span>
+          </div>
+    
+    <!----------------------------------------------------------------------------------------------------------------  -->
+            <div class="user-box  mt-5">
+              <!-- <input type="password" name="" required="" formControlastName="Cpassword">
+              <label>Conform-password</label> -->
+            
+              <small class="text-white">If you are alredy Register? go to <a routerLink="../sign-in">Login</a></small>
+          </div>
+            <button type="submit" class="btn1" [disabled]="userRegisterForm.invalid">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Submit
+            </button>
+           
+          </form>
+          <small class="text-white" style="margin-left:65% ;" >Go to home <a routerLink=""><i class="fa-solid fa-arrow-left-long"></i></a></small>
+        </div>
+      </div>
+    </div>
+   </div>
+  
+  
+  
+  
