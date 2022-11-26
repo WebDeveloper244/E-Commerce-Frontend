@@ -1,8 +1,213 @@
 <div class="container-fluid page">
     <div class="page__box pt-4  px-4">Product-Analytics</div>
-    <!-- <div class="page__content shadow p-3">
-        <div class="page__content-data"> -->
-            Product-Analytics content goes here
-        <!-- </div>
+    
+
+
+
+    <div class="container">
+      <div class="row my-5">
+        <div class="col d-flex justify-content-end">
+          <button type="button" class="btn btn-outline-primary" [ngClass]=" viewToggle ? 'btn-outline-info': ' ' " (click)="changeView()" >{{viewToggle ? 'List-View ' : 'Grid-View' }}</button>
+        </div>
+      </div>
+    </div>
+    <!----------------------------------------------------------------------------------------------------------- List View  -->
+    <div class="container mt-5" *ngIf="viewToggle">
+        <table class="table border">
+            <thead class="border-dark tableHead text-center text-white">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Images</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Status</th>
+                <th scope="col">Price</th>
+                <th scope="col">Details</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let item of dataComefromProductService; let i=index" class="text-center" >
+              <tr>
+                <th scope="row">{{i+1}}</th>
+                <td>{{item.productName}}</td>
+                <td><img [src]="Url+item.ProductImages[1].ProductImageUrl" alt="" srcset="" height="40px" width="40px"></td>
+                <td>{{item.quantity}}</td>
+                <td>{{item.Status}}</td>
+                <td>{{item.price}}</td>
+                <td>                                                 <!---------------------------------------------- FontAwesome Eye -->
+                  <i class="fa-sharp fa-solid fa-eye text-info " style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="getIdData(item._id)"></i>
+                  </td>
+                <td> 
+                  <!-- <button type="button" class="btn btn-outline-primary me-2 mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal1" (click)="getIdData(item._id)">Up-Date</button> -->
+                  <button type="button" class="btn btn-outline-warning me-2 mt-2" (click)="softDeleteProduct(item._id)">Delete</button>
+                  <button type="button" class="btn btn-outline-danger me-2 mt-2" (click)="hardDeleteProduct(item._id)">Pemanent-Delete</button>
+                </td>
+               
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    
+    <!----------------------------------------------------------------------------------------------------------- Grid View  -->
+    <div class="container mt-5" *ngIf="!viewToggle">
+      <div class="row">
+        <div class="col-md-6" *ngFor="let item of dataComefromProductService">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top cardImage" [src]="Url+item.ProductImages[1].ProductImageUrl" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text" >{{item.description}}</p>
+            </div>
+            <div class="d-flex justify-content-between mb-2 mx-5">
+              <i class="fa-sharp fa-solid fa-eye text-info " style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="getIdData(item._id)"></i>
+              <i class="fa-solid fa-pencil text-warning" style="cursor: pointer;"  data-bs-toggle="modal" data-bs-target="#exampleModal1" (click)="getIdData(item._id)"></i>
+              <i class="fa-sharp fa-solid fa-trash text-danger" style="cursor: pointer;"  (click)="softDeleteProduct(item._id)"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+     <!----------------------------------------------------------------------------------------------------------- Modal -->
+     <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">{{getIdProduct?.productName}}</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            </button>
+          </div>
+          <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-lg-3" *ngFor="let data of  getIdProduct?.ProductImages">
+                <img [src]="Url+data.ProductImageUrl" class="w-50 h-50"   [alt]="data.productName" srcset="">
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                        Product Details
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                      <div class="accordion-body">
+                        <ol class="list-group list-group-numbered">
+                          <li class="list-group-item">Company Name<strong>{{getIdProduct?.companyName}}</strong> </li>
+                          <li class="list-group-item">Product-Price <strong>{{getIdProduct?.price}}</strong> </li>
+                          <li class="list-group-item">Colors <strong>{{getIdProduct?.color}}</strong> </li>
+                          <li class="list-group-item">Company Size <strong>{{getIdProduct?.size}}</strong> </li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
     </div> -->
+    
+    
+    <!------------------------------------------------------------------------------------------------------------ Up-Date Modal -->
+    <!-- <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <form [formGroup]="UpDateMyProductForm" (ngSubmit)="updateProductForm()">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel1">{{getIdProduct?.productName}}</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            </button>
+          </div>
+          <div class="modal-body">
+           
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Product Name</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" formControlName="productName">
+              </div>
+    
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Product Price</label>
+                <input type="number" class="form-control" id="exampleInputEmail1" formControlName="price">
+              </div>
+    
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Product-Quantity</label>
+                <input type="number" class="form-control" id="exampleInputEmail1" formControlName="quantity">
+              </div>
+    
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Company-Name</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" formControlName="companyName">
+              </div>
+    
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Select-Color</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" formControlName="color">
+              </div>
+    
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Description</label>
+                <textarea name="" id="" cols="30" rows="10" class="w-100" formControlName="description"></textarea>
+              </div>
+            <!-------------------------------------------------------- Up-Date Image -->
+                <!-- <div class="container-fluid">
+                  <div class="row">
+                      <div class="col-lg-3 col-md-6 d-flex justify-content-center" *ngFor="let item of getIdProduct?.ProductImages">
+                        <div class="card" style="width: 18rem;">
+                          <img class="card-img-top cardImage" [src]="Url+item.ProductImageUrl" alt="">
+    
+                          <div class="mb-3">
+                            <label for="formFile" class="form-label tag">Choose Image</label>
+                            <input class="form-control input" #files type="file" id="formFile" (change)="getImage($event)">
+                          </div>
+    
+                          <button type="submit" class="btn btn-outline-primary" (click)="updateImage(getIdProduct._id, item)">Up Date</button>
+                           
+                        </div>
+                      </div>
+                  </div>
+                </div>
+            
+    
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+          </div>
+        </div>
+      </form>
+      </div>
+    </div> --> -->
+            
+      
 </div>

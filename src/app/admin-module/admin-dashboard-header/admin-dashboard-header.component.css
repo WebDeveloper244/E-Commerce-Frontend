@@ -1,4 +1,4 @@
-mt-toolbar{
+/* mt-toolbar{
     position: sticky;
     top: 0;
     z-index: 100;
@@ -21,11 +21,10 @@ button{
 .user-image-icon{
     height: 28px;
     font-size: 27px;
-}
+} */
 mt-toolbar{
     position: sticky;
     top: 0;
-    z-index: 100;
 }
 ul>li{
 list-style-type: none;
