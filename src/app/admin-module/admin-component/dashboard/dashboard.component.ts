@@ -32,7 +32,7 @@ public lineChartData: ChartConfiguration['data'] = {
     {
       data: [ 65, 59, 80, 81, 56, 55, 40 ],
       label: 'Series A',
-      backgroundColor: 'red',
+      backgroundColor: '#681199',
       borderColor: 'yellow',
       pointBackgroundColor: 'orange',
       pointBorderColor: 'green',
@@ -52,10 +52,10 @@ public lineChartData: ChartConfiguration['data'] = {
       fill: 'origin',
     },
     {
-      data: [ 180, 480, 770, 90, 1000, 270, 400 ],
-      label: 'Series C',
+      data: [ 183, 1770, 750, 700, 9000, 370, 1200 ],
+      label: 'Series D',
       yAxisID: 'y-axis-1',
-      backgroundColor: 'rgb(12, 255, 0)',
+      backgroundColor: 'red',
       borderColor: 'red',
       pointBackgroundColor: 'rgba(148,159,177,1)',
       pointBorderColor: '#fff',

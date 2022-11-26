@@ -1,99 +1,100 @@
 <div class="container-fluid page">
     <div class="page__box pt-4  px-4">Dashboard</div>
-    <div class="page__content shadow p-3 position-relative">
-        <div class="page__content-data position-absolute">
+    <!-- <div class="page__content shadow p-3">
+        <div class="page__content-data"> -->
            
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4 col-xl-3">
-                            <div class="card bg-c-blue order-card">
-                                <div class="card-block">
-                                    <h6 class="m-b-20">Total-Products</h6>
-                                    <h2 class="text-right"><i class="fa fa-cart-plus f-left"></i><span>{{dataComefromProductService.length}}</span></h2>
-                                    <p class="m-b-0">Completed Orders<span class="f-right">351</span></p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4 col-xl-3">
-                            <div class="card bg-c-green order-card">
-                                <div class="card-block">
-                                    <h6 class="m-b-20">Orders Received</h6>
-                                    <h2 class="text-right"><i class="fa fa-rocket f-left"></i><span>486</span></h2>
-                                    <p class="m-b-0">Completed Orders<span class="f-right">351</span></p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4 col-xl-3">
-                            <div class="card bg-c-yellow order-card">
-                                <div class="card-block">
-                                    <h6 class="m-b-20">Orders Received</h6>
-                                    <h2 class="text-right"><i class="fa fa-refresh f-left"></i><span>486</span></h2>
-                                    <p class="m-b-0">Completed Orders<span class="f-right">351</span></p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4 col-xl-3">
-                            <div class="card bg-c-pink order-card">
-                                <div class="card-block">
-                                    <h6 class="m-b-20">Orders Received</h6>
-                                    <h2 class="text-right"><i class="fa fa-credit-card f-left"></i><span>486</span></h2>
-                                    <p class="m-b-0">Completed Orders<span class="f-right">351</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            <!-------------------------------------------------------------------------------------------------------------------------------------  -->
-            <div class="container">
+            <div class="container mt-5">
                 <div class="row">
-                    <div class="col-md-8">
-                       
-                            <div class="flex">
-                                <div class="flex-item my-5">
-                                  <div style="display: block; background-color: rgb(255, 255, 255); color: white; border-radius: 5%; border-color: rgb(0, 255, 64);">
-                                  <canvas baseChart width="400" height="200"
-                                              [data]="lineChartData"
-                                              [options]="lineChartOptions"></canvas>
-                                  </div>
-                                  
-                                </div>
-                                <!-- <div class="flex-item">
-                                  <table class="table table-responsive table-condensed">
-                                    <tr>
-                                      <th *ngFor="let label of lineChartData.labels">{{label}}</th>
-                                    </tr>
-                                    <tr *ngFor="let d of lineChartData.datasets; let i=index" [class]="'line-'+i">
-                                      <td *ngFor="let label of lineChartData.labels; let j=index">{{d && d.data[j]}}</td>
-                                    </tr>
-                                  </table>
-                                </div> -->
-                              </div>
-                        
-                    </div>
-                    <div class="col-md-4">
-                        <div>
-                            <div class="my-5">
-                              <div style="display: block">
-                                <canvas baseChart
-                                  [data]="radarChartData"
-                                  [options]="radarChartOptions"
-                          
-                                  [type]="radarChartType">
-                                </canvas>
-                              </div>
+                    <div class="col-md-4 col-xl-3">
+                        <div class="card bg-c-blue order-card">
+                            <div class="card-block">
+                                <h6 class="m-b-20">Total-Products</h6>
+                                <h2 class="text-right"><i class="fa fa-cart-plus f-left"></i><span>{{dataComefromProductService.length}}</span></h2>
+                                <p class="m-b-0">Completed Orders<span class="f-right">351</span></p>
                             </div>
-                          </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 col-xl-3">
+                        <div class="card bg-c-green order-card">
+                            <div class="card-block">
+                                <h6 class="m-b-20">Orders Received</h6>
+                                <h2 class="text-right"><i class="fa fa-rocket f-left"></i><span>486</span></h2>
+                                <p class="m-b-0">Completed Orders<span class="f-right">351</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 col-xl-3">
+                        <div class="card bg-c-yellow order-card">
+                            <div class="card-block">
+                                <h6 class="m-b-20">Orders Received</h6>
+                                <h2 class="text-right"><i class="fa fa-refresh f-left"></i><span>486</span></h2>
+                                <p class="m-b-0">Completed Orders<span class="f-right">351</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 col-xl-3">
+                        <div class="card bg-c-pink order-card">
+                            <div class="card-block">
+                                <h6 class="m-b-20">Orders Received</h6>
+                                <h2 class="text-right"><i class="fa fa-credit-card f-left"></i><span>486</span></h2>
+                                <p class="m-b-0">Completed Orders<span class="f-right">351</span></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+        <!-------------------------------------------------------------------------------------------------------------------------------------  -->
+        <div class="container">
+            <div class="row d-flex justify-content-center" >
+                <div class="col-md-8">
+                   
+                      <div class="chartBox my-5 py-4 px-4">
+                        <div class="flex">
+                            <div class="flex-item">
+                              <div style="display: block; background-color: rgb(255, 255, 255);">
+                              <canvas baseChart width="400" height="200"
+                                          [data]="lineChartData"
+                                          [options]="lineChartOptions"></canvas>
+                              </div>
+                              
+                            </div>
+                            <!-- <div class="flex-item">
+                              <table class="table table-responsive table-condensed">
+                                <tr>
+                                  <th *ngFor="let label of lineChartData.labels">{{label}}</th>
+                                </tr>
+                                <tr *ngFor="let d of lineChartData.datasets; let i=index" [class]="'line-'+i">
+                                  <td *ngFor="let label of lineChartData.labels; let j=index">{{d && d.data[j]}}</td>
+                                </tr>
+                              </table>
+                            </div> -->
+                          </div>
+                      </div>
+                    
+                </div>
+                <div class="col-md-4 ">
+                    <div class="chartBox my-5 py-5 px-4">
+                          <div style="display: block">
+                            <canvas baseChart
+                              [data]="radarChartData"
+                              [options]="radarChartOptions"
+                      
+                              [type]="radarChartType">
+                            </canvas>
+                          </div>
+                      </div>
+                </div>
             </div>
-                
-            
-            
-                
-            
-            
-
         </div>
+                
+            
+            
+                
+            
+            
+        
+        <!-- </div> -->
+        <!-- </div> -->
 </div>

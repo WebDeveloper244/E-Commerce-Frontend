@@ -1,4 +1,44 @@
 @import url('../dashboard/dashboard.component.css');
+body{
+    color: black;
+}
+.input{
+    width: 100%;
+    border-radius: 0%; 
+}
+.input:focus{
+    box-shadow: none; 
+    border: 1px solid #681199;
+}
+label{
+    color: black;
+}
+.form-check-input:checked{
+    background-color: #681199;
+    /* color: #ffff; */
+    box-shadow: none;
+    border-color: #681199;
+}
+.form-check-input:focus{
+    box-shadow: none;
+    border-color: #681199;
+}
+.button{
+    width: 98%;
+margin-left: 13px;
+    border-radius: 0px;
+    border-color: #681199;
+    color: #681199;
+}
+.button:hover{
+  background-color: #681199;
+   color: #ffff;
+}
+.formBox{
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 20px 2px rgb(232, 232, 232);
+}
 
 
 

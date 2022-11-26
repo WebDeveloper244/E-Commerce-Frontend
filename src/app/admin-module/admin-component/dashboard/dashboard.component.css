@@ -1,11 +1,11 @@
 .page {
     color: white;
     padding: 0 1rem;
-    background: #f1f5f9;
+    background: #ffffff;
 }
 .page__box {
     min-height: 120px;
-    background: #1e293b;
+    background: #681199;
     margin: 0 -1rem;
     font-size: 36px;
 }
@@ -15,38 +15,54 @@
     margin-top: -2rem;
     background-color: white;
     color: black;
-    font-size: 2rem;
+    font-size: 18px;
 }
-.page__content-data {
+/* .page__content-data {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
+} */
 /* *****************************************************    */
 /**************************************** Dashboard Card ****************************************************/
 
-body{
+/* body{
     margin-top:20px;
     background-color: rgb(230, 230, 230);
-}
+} */
 .order-card {
-    color: #fff;
+    color: #681199;
 }
 
 .bg-c-blue {
-    background: linear-gradient(45deg,#0034ff,#000000);
+    /* background: linear-gradient(45deg,#0034ff,#000000); */
+    background-color: white;
+    box-shadow: 2px 2px 20px 2px rgb(232, 232, 232);
+    border-radius: 10px;
+    border: none;
 }
 
 .bg-c-green {
-    background: linear-gradient(45deg,#088b23,#000000);
+    /* background: linear-gradient(45deg,#088b23,#000000); */
+    background-color: white;
+    box-shadow:2px 2px 20px 2px rgb(232, 232, 232);
+    border-radius: 10px;
+    border: none;
 }
 
 .bg-c-yellow {
-    background: linear-gradient(45deg,#FF9600,#ff0606);
+    /* background: linear-gradient(45deg,#FF9600,#ff0606); */
+    background-color: white;
+    box-shadow: 2px 2px 20px 2px rgb(232, 232, 232);
+    border-radius: 10px;
+    border: none;
 }
 
 .bg-c-pink {
-    background: linear-gradient(45deg,#ff002b,#6800ff);
+    /* background: linear-gradient(45deg,#ff002b,#6800ff); */
+    background-color: white;
+    box-shadow: 2px 2px 20px 2px rgb(232, 232, 232);
+    border-radius: 10px;
+    border: none;
 }
 
 
@@ -60,7 +76,14 @@ body{
     transition: all 5.0s ease-in-out;
 } */
 .card:hover{
-    box-shadow: 2px 2px 8px 2px rgb(95, 94, 94);
+    background-color: #681199;
+    color: #ffffff;
+}
+.fa fa:hover{
+color: #ffffff;
+}
+.fa fa{
+color: #681199;
 }
 
 .card .card-block {
@@ -79,5 +102,11 @@ body{
     float: right;
 }
 
-/* *******************************************************************  */
+/* ******************************************************************* Chart */
+.chartBox{
+    background-color: rgb(255, 255, 255);
+    box-shadow:2px 2px 20px 2px rgb(232, 232, 232);
+    border-radius: 10px;
+    border: none;
+}
 
