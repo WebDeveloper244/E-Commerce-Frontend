@@ -45,7 +45,7 @@ this.loginApi.CreateLoginForm(submitFormResult).subscribe((res:any)=>{
   this.loginApi.saveLoginTokenToLocalStorage(res.Token);
 
   if(res.userPrivilage === 'Admin'){
-  this.router.navigate(['/admin-module'])
+  this.router.navigate(['/Admin-Module'])
   }else{
   }
   // ***************************** 🚗🚗🚗 ***************************//
