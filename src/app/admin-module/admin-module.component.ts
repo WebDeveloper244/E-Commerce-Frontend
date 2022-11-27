@@ -6,14 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-module.component.css']
 })
 export class AdminModuleComponent implements OnInit {
-  sidebarOpen:boolean = true
-
+  sideStatus:boolean=true
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  sideBarToggler(){
-    this.sidebarOpen = !this.sidebarOpen
   }
 }

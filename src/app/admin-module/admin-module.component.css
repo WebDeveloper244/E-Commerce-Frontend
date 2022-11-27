@@ -1,67 +1,50 @@
-:host {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+
+app-admin-dashboard-header{
+    position: fixed;
+    top: 0px;
+    height: 4rem;
+    z-index: 1052;
+    width: 100%;
 }
-.mat-drawer {
-    width: 260px;
-    /* background-color: #0f172a; */
-    background-color: #681199;
+main{
+    position: absolute;
+    top: 4rem;
+    width: 100%;
+    z-index:1051;
 }
-.mat-drawer-container {
-    height: 100%;
-    background-color: white;
+app-admin-sidebar{
+    border: 1px solid rgb(157, 11, 11);
+    position: fixed;
+    margin-top: -8px;
+    left: 0rem;
+    width: 60px;
+    height: 100vh;
+    box-shadow: 8px 0px 10px rgba(0, 0, 0, 0.5);
+    background-color: rgb(157, 11, 11);
+    overflow-x: hidden;
+    white-space: nowrap;
+    transition: width 250ms ease-in;
 }
-.logo {
-    text-align: center;
+.app-side-nav-open{
+    width: 250px;
 }
-.logo h2 {
-    font-size: 30px;
+.display-area{
+    position: absolute;
+    z-index: 1051;
+    left: 60px;
+    width: calc(100% - 60px);
+    transition: left 250ms ease-in, width 250ms ease-in;
 }
-.logo h3 {
-    font-size: 18px;
+.display-shrink-area{
+    width: calc(100% - 250px);
+     left: 250px;
 }
-.mat-icon {
-    vertical-align: center;
-    margin-right: 1rem;
-}
-.mat-divider {
-    border-top-width: 2px;
-    border-color: white;
-}
-.mat-list-item {
-    /* color: #94a3b8; */
-    color: #ffffff;
-    font-size: 1rem;
-    height: 44px;
-    margin-bottom: 4px;
-}
-.mat-list-item ::ng-deep .mat-list-item-content {
-    border-radius: 5px;
-    margin: 0 8px;
-}
-.mat-list-item ::ng-deep .mat-list-item-content:hover {
-    /* background-color: #2c3344; */
-    background-color: #d7d0f4;;
-    color: #681199;
-}
-.list-item-active {
-    /* color: #f2f5f7; */
-    color: #681199;
-}
-.list-item-active ::ng-deep .mat-list-item-content {
-    background-color: #ffffff;
-}
-.list-item-active ::ng-deep .mat-list-item-contenthover {
-    background-color: #ffffff;
-    
-}
-.mat-subheader {
-    color: #818cf8;
-    font-size: 0.6rem;
-    font-weight: 100;
-    letter-spacing: 1px;
-}
-.logo>h3{
-        margin-top: -12;
+@media (max-width : 776px) {
+    .app-side-nav-open{
+        width: 60px;
     }
+    .display-shrink-area{
+        width: calc(100% - 60px);
+        left: 60px;
+    }
+}

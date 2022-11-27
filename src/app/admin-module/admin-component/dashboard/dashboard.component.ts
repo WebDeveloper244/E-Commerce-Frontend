@@ -32,7 +32,7 @@ public lineChartData: ChartConfiguration['data'] = {
     {
       data: [ 65, 59, 80, 81, 56, 55, 40 ],
       label: 'Series A',
-      backgroundColor: '#681199',
+      backgroundColor: 'rgb(157, 11, 11)',
       borderColor: 'yellow',
       pointBackgroundColor: 'orange',
       pointBorderColor: 'green',

@@ -1,36 +1,17 @@
-<mat-drawer-container class="example-container">
-    <mat-drawer mode="side" [opened]="sidebarOpen">
-        <mat-nav-list>
-            <div class="logo py-4">
-                <img src="../../assets/logo.png" width="80px" height="80px" class="" alt="" srcset="">
-                <h2 class="text-white">Name Baloch</h2>
-                <h3 class="text-white">Baloch@gmail.com</h3>
-            </div>
-            <mat-divider></mat-divider>
-            <h2 matSubheader mt-2>Applications</h2>
-            <mat-list>
-                <mat-list-item  routerLinkActive="list-item-active" routerLink="Dashboard" ><mat-icon >home</mat-icon> Dashboard
-                </mat-list-item>
-                <mat-list-item routerLinkActive="list-item-active" routerLink="create-product"><mat-icon> shopping_cart</mat-icon> Create-Product
-                </mat-list-item>
-                <mat-list-item routerLinkActive="list-item-active" routerLink="product-analytics"><mat-icon>stacked_line_chart</mat-icon>Product-Analytics
-                </mat-list-item>
-                <mat-list-item routerLinkActive="list-item-active"><mat-icon>edit</mat-icon>List
-                </mat-list-item>
-                <mat-list-item routerLinkActive="list-item-active"><mat-icon>edit</mat-icon>List
-                </mat-list-item>
-                <mat-list-item routerLinkActive="list-item-active"><mat-icon>edit</mat-icon>List
-                </mat-list-item>
-               </mat-list>
-               
-        </mat-nav-list>
-    </mat-drawer>
-    <mat-drawer-content>
-     <app-admin-dashboard-header (toggleSidebarForMe)="sideBarToggler()" ></app-admin-dashboard-header>
-        <router-outlet></router-outlet>
-    </mat-drawer-content>
-    
-  </mat-drawer-container>
+<div class="container-fluid g-0">
+  <app-admin-dashboard-header (navToggle)="sideStatus = $event"></app-admin-dashboard-header>
+
+  <main>
+      <app-admin-sidebar [sideNavStatus]="sideStatus" [ngClass]="{'app-side-nav-open' : sideStatus}"></app-admin-sidebar>
+
+      <div class="display-area p-3" [ngClass]="{'display-shrink-area':sideStatus}" >
+          <router-outlet></router-outlet>
+         
+      </div>
+  </main>
+</div>
+
+
   
   
 

@@ -5,7 +5,7 @@
 }
 .page__box {
     min-height: 120px;
-    background: #681199;
+    background: rgb(157, 11, 11);
     margin: 0 -1rem;
     font-size: 36px;
 }
@@ -17,24 +17,15 @@
     color: black;
     font-size: 18px;
 }
-/* .page__content-data {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-} */
-/* *****************************************************    */
+
+
 /**************************************** Dashboard Card ****************************************************/
 
-/* body{
-    margin-top:20px;
-    background-color: rgb(230, 230, 230);
-} */
 .order-card {
-    color: #681199;
+    color: rgb(157, 11, 11);
 }
 
 .bg-c-blue {
-    /* background: linear-gradient(45deg,#0034ff,#000000); */
     background-color: white;
     box-shadow: 2px 2px 20px 2px rgb(232, 232, 232);
     border-radius: 10px;
@@ -42,7 +33,6 @@
 }
 
 .bg-c-green {
-    /* background: linear-gradient(45deg,#088b23,#000000); */
     background-color: white;
     box-shadow:2px 2px 20px 2px rgb(232, 232, 232);
     border-radius: 10px;
@@ -50,7 +40,6 @@
 }
 
 .bg-c-yellow {
-    /* background: linear-gradient(45deg,#FF9600,#ff0606); */
     background-color: white;
     box-shadow: 2px 2px 20px 2px rgb(232, 232, 232);
     border-radius: 10px;
@@ -58,32 +47,21 @@
 }
 
 .bg-c-pink {
-    /* background: linear-gradient(45deg,#ff002b,#6800ff); */
     background-color: white;
     box-shadow: 2px 2px 20px 2px rgb(232, 232, 232);
     border-radius: 10px;
     border: none;
 }
 
-
-/* .card{
-    border-radius: 5px;
-    -webkit-box-shadow: 0 9px 2.94px 0.06px rgba(0, 0, 0, 0.16);
-    box-shadow: 0 2px 2.94px 0.06px rgba(4,26,55,0.16);
-    border: none;
-    margin-right: 30px;
-    -webkit-transition: all 5.3s ease-in-out;
-    transition: all 5.0s ease-in-out;
-} */
-.card:hover{
-    background-color: #681199;
+.card1:hover{
+    background-color: rgb(157, 11, 11);
     color: #ffffff;
 }
 .fa fa:hover{
 color: #ffffff;
 }
 .fa fa{
-color: #681199;
+color: rgb(157, 11, 11);
 }
 
 .card .card-block {
