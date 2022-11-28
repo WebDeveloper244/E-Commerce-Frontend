@@ -21,44 +21,58 @@
 
 /**************************************** Dashboard Card ****************************************************/
 
+
+.topclass{
+    width: 91%;
+    background-color: rgb(157, 11, 11);
+    position: relative;
+     z-index: 3;
+    height: 10vh;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    font-family: poppins;
+    color: white;
+    font-weight: 800;
+    box-shadow: 2px 2px 20px 2px rgb(223, 184, 184);
+}
+
 .order-card {
     color: rgb(157, 11, 11);
+    z-index: 2;
 }
+
 
 .bg-c-blue {
     background-color: white;
     box-shadow: 2px 2px 20px 2px rgb(232, 232, 232);
-    border-radius: 10px;
+    border-radius: 0%;
     border: none;
+    margin-top: -52px;
 }
 
 .bg-c-green {
     background-color: white;
     box-shadow:2px 2px 20px 2px rgb(232, 232, 232);
-    border-radius: 10px;
+    border-radius: 0px;
     border: none;
+    margin-top: -52px;
 }
 
 .bg-c-yellow {
     background-color: white;
     box-shadow: 2px 2px 20px 2px rgb(232, 232, 232);
-    border-radius: 10px;
+    border-radius: 0px;
     border: none;
+    margin-top: -52px;
 }
 
 .bg-c-pink {
     background-color: white;
     box-shadow: 2px 2px 20px 2px rgb(232, 232, 232);
-    border-radius: 10px;
+    border-radius: 0px;
     border: none;
-}
-
-.card1:hover{
-    background-color: rgb(157, 11, 11);
-    color: #ffffff;
-}
-.fa fa:hover{
-color: #ffffff;
+    margin-top: -52px;
 }
 .fa fa{
 color: rgb(157, 11, 11);
@@ -66,6 +80,7 @@ color: rgb(157, 11, 11);
 
 .card .card-block {
     padding: 25px;
+    margin-top: 38px;
 }
 
 .order-card i {

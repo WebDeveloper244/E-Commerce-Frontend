@@ -26,7 +26,9 @@
       border-radius: 10px;
   }
   .nav-list-item.active{
-    background-color: rgb(252, 123, 123);
+    /* background-color: rgb(252, 123, 123); */
+    background-color: white;
+    color: rgb(157, 11, 11);
     border-radius: 10px;
   }
   .nav-list-item i{
@@ -38,8 +40,7 @@
   }
   .nav-list-item span{
       width: 57%;
-      margin-left: 5px;
-      
+      margin-left: 5px; 
   }
   a{
       text-decoration: none;
