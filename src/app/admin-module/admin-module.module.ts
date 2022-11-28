@@ -10,6 +10,7 @@ import { AdminDashboardHeaderComponent } from './admin-dashboard-header/admin-da
 import { MaterialModuleModule } from '../material-module/material-module.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
+import { AdminProfileComponent } from './admin-component/admin-profile/admin-profile.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
     CreateProductComponent,
     ProductAnalyticsComponent,
     AdminDashboardHeaderComponent,
-    AdminSidebarComponent
+    AdminSidebarComponent,
+    AdminProfileComponent
   ],
   imports: [
     CommonModule,

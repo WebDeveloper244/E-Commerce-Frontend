@@ -20,7 +20,7 @@ app-admin-sidebar{
     position: fixed;
     margin-top: -8px;
     left: 0rem;
-    width: 60px;
+    width: 57px;
     height: 100vh;
     /* box-shadow: 8px 0px 10px rgba(0, 0, 0, 0.5); */
     background-color: rgb(157, 11, 11);
@@ -34,8 +34,8 @@ app-admin-sidebar{
 .display-area{
     position: absolute;
     z-index: 1051;
-    left: 60px;
-    width: calc(100% - 60px);
+    left: 57px;
+    width: calc(100% - 57px);
     transition: left 250ms ease-in, width 250ms ease-in;
 }
 .display-shrink-area{
@@ -44,10 +44,10 @@ app-admin-sidebar{
 }
 @media (max-width : 776px) {
     .app-side-nav-open{
-        width: 60px;
+        width: 57px;
     }
     .display-shrink-area{
-        width: calc(100% - 60px);
-        left: 60px;
+        width: calc(100% - 57px);
+        left: 57px;
     }
 }
