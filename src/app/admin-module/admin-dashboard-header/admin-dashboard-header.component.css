@@ -1,6 +1,8 @@
 nav{
     width: 100%;
-    background-color: rgb(157, 11, 11);;
+    background-color: rgb(157, 11, 11);
+    font-family: poppins;
+    font-weight: 900;
 }
 .side-nav-button{
     display: flex;
@@ -9,7 +11,7 @@ nav{
     font-size: 1rem;
 }
 .side-nav-button:hover{
-    background-color: rgb(114, 114, 114);
+    background-color: rgb(230, 105, 105);
     border-radius: 5px;
 }
 .navbar-brand{
@@ -19,6 +21,15 @@ nav{
 .dropdown-menu{
     width: 30px;
 }
-.side-nav-login{
-    margin-left: 80%;
+button{
+    background-color: rgba(240, 248, 255, 0);
+    border: none;
+}
+.text{
+font-family: poppins;
+font-weight: 600;
+}
+.nav-bar-heading{
+    font-weight: 900;
+    font-size: 20px;
 }

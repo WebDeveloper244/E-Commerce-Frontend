@@ -59,15 +59,8 @@ margin-left: 2px;
 .menu-items{
     order: 2;
     display: flex;
+   
 }
-/* .logo{
-    /* order: 1; */
-/*     
-    background-image: url('../../../../assets/Images/blkops-logo.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 100px;
-    width: 100px; */
 
 
 .menu-items li{
@@ -81,6 +74,8 @@ margin-left: 2px;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease-in-out;
+    font-family: poppins;
+    font-weight: 700;
 }
 
 /************************** nav-bar-hover */
