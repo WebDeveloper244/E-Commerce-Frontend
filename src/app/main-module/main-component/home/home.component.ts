@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductApiService } from 'src/app/shared-service/product-api/product-api.service';
-
+import * as AOS from 'aos';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -28,6 +28,7 @@ productView:boolean=true
     ) { }
 
   ngOnInit(): void {
+    AOS.init();
     this.getProductDatafromservice.getProduct().subscribe(( res:any )=>{
 this.ProductArray = res.Result
 
