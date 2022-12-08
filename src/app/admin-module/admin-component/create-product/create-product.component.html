@@ -34,7 +34,7 @@
                <label for="" class="tag text-dark">Select Size</label>
               <div class="mb-3">
                 <ng-container *ngFor="let item of selectSize" class="text-dark" >
-                <input type="checkbox" #checkBoxes class="form-check-input" [value]="item" [id]="item" (click)="getSize($event)"/>
+                <input type="checkbox" #checkBoxes class="form-check-input checkbox-inline" [value]="item" [id]="item" (click)="getSize($event)"/>
                 <label class="form-check-label mx-2" [for]="item">
                   {{item}}
                 </label>

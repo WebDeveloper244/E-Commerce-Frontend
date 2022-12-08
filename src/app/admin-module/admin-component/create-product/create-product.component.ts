@@ -10,9 +10,9 @@ import { ProductApiService } from 'src/app/shared-service/product-api/product-ap
 })
 export class CreateProductComponent implements OnInit {
   @ViewChild('files') files:ElementRef|any;
-  @ViewChildren('checkBoxes')checkBoxes:QueryList<ElementRef>|undefined
+  // @ViewChildren('checkBoxes')checkBoxes:QueryList<ElementRef>|undefined
   
-  value = 'Clear me';
+  // value = 'Clear me';
   color=["Red","Black","Blue","Multiple"];
   categories=["All","Latest"];
   selectSize=["S","M","L","X-L","XX-L"];
@@ -127,9 +127,9 @@ export class CreateProductComponent implements OnInit {
            this.files.nativeElement.value=null
            this.imageArray = []
            this.newSizeArray = []
-           this.checkBoxes?.forEach((element)=>{
-              element.nativeElement.checked = false
-           })
+          //  this.checkBoxes?.forEach((element)=>{
+          //     element.nativeElement.checked = false
+          //  })
  })
    }
 }

@@ -10,10 +10,10 @@ export class LoginRegisterService {
     private readonly http:HttpClient
   ) { }
   CreateUserform(Payload:any){
-    return this.http.post('http://localhost:5050/UsermanagementRouter/userRegister',Payload)
+    return this.http.post('http://localhost:8686/UsermanagementRouter/userRegister',Payload)
   }
   CreateLoginForm(Payload:any){
-    return this.http.post('http://localhost:5050/UsermanagementRouter/userLogin',Payload)
+    return this.http.post('http://localhost:8686/UsermanagementRouter/userLogin',Payload)
   }
   saveLoginTokenToLocalStorage(Payload:any){
    return  localStorage.setItem('Access-Token',Payload)

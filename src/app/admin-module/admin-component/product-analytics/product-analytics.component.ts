@@ -11,7 +11,7 @@ import { ProductApiService } from 'src/app/shared-service/product-api/product-ap
 export class ProductAnalyticsComponent implements OnInit {
   
   
-  Url = 'http://localhost:5050/'
+  Url = 'http://localhost:8686/'
   dataComefromProductService:any=[];
   getIdProduct:any={} // by default its empty object  and "?" in html  file is if data exisit then show otherwise error not show (design pattern) 
   UpDateMyProductForm:any | FormGroup

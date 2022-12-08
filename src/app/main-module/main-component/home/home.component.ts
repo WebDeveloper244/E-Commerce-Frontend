@@ -20,7 +20,7 @@ productView:boolean=true
 
 
   ProductArray:any=[];
-  Url = 'http://localhost:5050/'
+  Url = 'http://localhost:8686/'
 
   constructor(
     private getProductDatafromservice:ProductApiService,
