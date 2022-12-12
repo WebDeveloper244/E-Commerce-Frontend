@@ -62,7 +62,7 @@
                                     <a routerLink="">Adidas</a>
                                     <a routerLink="">Rolex</a> -->
                                     <div class="mb-1 ms-5 form-check">
-                                      <input type="checkbox" class="form-check-input" id="check1" (click)="getproductName(ProductArray.Adidas)"/>
+                                      <input type="checkbox" class="form-check-input" id="check1"/>
                                       <label class="form-check-label" for="check1">Levis</label>
                                     </div>
                                     <div class="mb-1 ms-5 form-check">
@@ -114,7 +114,7 @@
                                             <span class="card-title card-title">{{item.productName}}</span>
                                             <div class="card-body">
                                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                              <a href="#" class="btn btn-primary">View-Cart</a>
+                                              <a class="btn btn-primary" (click)="reDirectSingleProductPage(item._id)">View-Cart</a>
                                               <i class="fa-sharp fa-solid fa-cart-shopping red pointer" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
                                             </div>
                                           </div>
@@ -132,7 +132,7 @@
                                                     <div class="card-body">
                                                         <span class="card-title1">{{item.productName}}</span>
                                                       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                                      <button class="btn btn-primary" (click)="reDirectSingleProductPage(item._id)" >View-Cart</button>
+                                                      <a class="btn btn-primary" (click)="reDirectSingleProductPage(item._id)">View-Cart</a>
                                                       
                                                       <i class="fa-sharp fa-solid fa-cart-shopping red pointer" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
                                                     </div>

@@ -25,7 +25,7 @@ const routes: Routes = [
     component:ProductComponent
   },
   {
-    path:"View-Product",
+    path:"View-Product/:Id",
     component:ViewProductComponent
   },
   {

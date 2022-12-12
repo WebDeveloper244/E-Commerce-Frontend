@@ -27,7 +27,7 @@ return  this.http.delete(`http://localhost:8686/ProductManagement/DeleteProductB
   upDateProductById(payLoad:any){ 
 return  this.http.post(`http://localhost:8686/ProductManagement/updateProductById/`,payLoad)
   }
-  getProductByCompanyName(companyName:any){
-return this.http.get(`http://localhost:8686/ProductManagement`)
-  }
+//   getProductByCompanyName(companyName:any){
+// return this.http.get(`http://localhost:8686/ProductManagement`)
+//   }
 }

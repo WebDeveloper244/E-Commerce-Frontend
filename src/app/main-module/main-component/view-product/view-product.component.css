@@ -1,4 +1,4 @@
-.banner::before{
+.banner::before {
     content: " ";
     height: 100%;
     width: 100%;
@@ -7,10 +7,10 @@
     background-color: rgba(176, 49, 49, 0.54);
 }
 
-.banner{
-height: 50vh;
-width: 100%;
-background-image: url("../../../../assets/sec-1.jpg");
+.banner {
+    height: 50vh;
+    width: 100%;
+    background-image: url("../../../../assets/sec-1.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -18,60 +18,262 @@ background-image: url("../../../../assets/sec-1.jpg");
     z-index: 1;
     margin-top: -93px;
 }
-.content{
+
+.content {
     z-index: 2;
 }
-.content>h3{
+
+.content>h3 {
     padding-top: 11%;
-margin-left: 40%;
-color: white;
-font-size: 61px;
-font-family: Roboto, HelveticaNeue, Arial, sans-serif;
-font-weight: bold;
+    margin-left: 40%;
+    color: white;
+    font-size: 61px;
+    font-family: Roboto, HelveticaNeue, Arial, sans-serif;
+    font-weight: bold;
 }
-.content>h3::after{
+
+.content>h3::after {
     content: " ";
     display: block;
     height: 4px;
     width: 32%;
     background-color: red;
 }
+
 /**************************************************************************** content-responsive  */
 @media (max-width:1199px) {
-    .content>h3{
+    .content>h3 {
         padding-top: 18%;
-margin-left: 40%;
-color: white;
-font-size: 42px;
+        margin-left: 40%;
+        color: white;
+        font-size: 42px;
     }
 }
+
 @media (max-width:991px) {
-         .content>h3{
-            padding-top: 22%;
-margin-left: 37%;
-color: white;
-font-size: 40px;
+    .content>h3 {
+        padding-top: 22%;
+        margin-left: 37%;
+        color: white;
+        font-size: 40px;
     }
 }
+
 @media (max-width:767px) {
-    .content>h3{
+    .content>h3 {
         padding-top: 28%;
         margin-left: 35%;
         color: white;
         font-size: 37px;
     }
 }
+
 @media (max-width:567px) {
-    .content>h3{
+    .content>h3 {
         padding-top: 36%;
         margin-left: 30%;
         color: white;
         font-size: 39px;
     }
 }
+
 /* ********************************************* image thumbnais */
-.image-thumbnails>img{
-    width: 17%;
+.main-Image {
+    height: 45vh;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.image-thumbnails>img {
+    width: 10vh;
     cursor: pointer;
-    height: 7vh;
+    height: 8vh;
+    margin-bottom: 10px;
+}
+
+.content>h1 {
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+
+.content>h2 {
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+
+.wrapper1 {
+    border-left: 4px solid red;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper1>span {
+    font-family: 'Poppins';
+    font-weight: 600;
+    display: block;
+}
+
+.wrapper1>ul {
+    list-style-type: none;
+    border: 1px solid red;
+    display: inline-block;
+    text-align: center;
+    width: 46px;
+    margin-left: 0px;
+    margin-top: 9px;
+    padding-left: 0px;
+}
+
+.wrapper1>ul:hover {
+    background-color: #f3f3f3;
+}
+
+.quantity-wrapper1 {
+    display: inline-block;
+}
+
+.quantity-wrapper1>span {
+    border: 1px solid red;
+    padding: 3px 15px 3px 15px;
+}
+
+.quantity-wrapper1>span:hover {
+    cursor: pointer;
+    background-color: #f3f3f3;
+}
+
+.btn1 {
+    margin-left: 0px;
+    margin-top: 12px;
+    display: block;
+    border-radius: 0%;
+    border: 1px solid red;
+    font-family: poppins;
+    background-color: red;
+    color: white;
+}
+
+.fontAwesome {
+    font-size: 20px;
+}
+
+.fontAwesome>span {
+    font-size: 15px;
+    margin-left: 10px;
+    font-family: poppins;
+}
+
+.fontAwesome>div {
+    font-size: 13px;
+    margin-left: 33px;
+    font-family: poppins;
+    color: #282727;
+    margin-top: -5px;
+}
+/*------------------------>> Button <<---------------------------------*/
+.btn{
+    background: rgb(255, 255, 255);
+    color: rgb(255, 0, 0);
+    border-radius: 0%;
+    border-color: red;
+}
+.btn:hover{
+    background: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 0%;
+}
+.btn:focus{
+    box-shadow: none;
+}
+  
+
+/*********************************************card 2 */
+.fa-cart-shopping{
+    margin-left: 94px;
+    font-size: 21px;
+    cursor: pointer;
+}
+.fa-cart-shopping:hover{
+    
+    color: #fff !important;
+    text-shadow:
+    0 0 6px #ff0101	,
+    0 0 6px #ff0101	,
+    0 0 6px #ff0101	,
+    0 0 6px #ff0101	,
+    0 0 6px #ff0101	,
+    0 0 6px #ff0101	;
+   
+      -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.red{
+    color: red;
+};
+.pointer{
+    cursor: pointer;
+}
+/**************************************************************** Quality Card */
+.card1{
+    width: 100%;
+}
+.card1>img{
+    width: 16%;
+} 
+.card1 {
+    margin-top: 45px;
+    overflow: hidden;
+}
+
+.img1 {
+    max-width: 100%;
+    height: 112%;
+}
+
+.img1 {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.card-title1 {
+    position: absolute;
+    background-color: red;
+    color: white;
+    width: 70px;
+    margin-left: -164px;
+    margin-top: -9px;
+    text-align: center;
+}
+
+/******************************** Card-Responsive  */
+@media (max-width: 1199px) {
+    /* .side-area{
+       display: none;
+    } */
+
+    /* }
+@media (max-width: 767px){
+    .card{
+        margin-left: 107px;
+    }
+}
+@media (max-width: 567){
+    .card{
+        margin-left: 113px;
+    
+} */
+}
+
+/******************************** Card-Responsive  */
+@media (max-width: 767px) {
+    .img1 {
+        width: 100%;
+        height: 100%;
+    }
 }

@@ -1,6 +1,105 @@
 <div class="banner">
     <div class="content">
-        <h3 >View Products</h3>
+        <h3>View Products</h3>
     </div>
 </div>
 <!-------------------------------------------------------------------- view-product  -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+
+            <div class="main-Image d-flex justify-content-center">
+                <img [src]="url+getAllDataWithOwnId?.ProductImages[0].ProductImageUrl" srcset="" class="w-100">
+            </div>
+
+            <div class="box w-100 d-flex justify-content-between">
+                <div class="image-thumbnails" *ngFor="let images of getAllDataWithOwnId?.ProductImages">
+                    <img [src]="url+images.ProductImageUrl" class="" [alt]="images?.ProductImageName"
+                        (click)="imageIndex = images?.ProductImageName">
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="content">
+                <h1>{{getAllDataWithOwnId?.productName}}</h1>
+                <hr>
+
+                <h2 class="text-danger">{{getAllDataWithOwnId?.price|currency}}</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima dolorem omnis aspernatur, ducimus,
+                    eos itaque quam suscipit ipsa non illo quod quidem eligendi, impedit nam enim ad fugit facere
+                    nesciunt ut dolore dicta iure necessitatibus nihil alias! Fugit fugiat, ea molestias mollitia
+                    tenetur dolorem eius quisquam, ex provident corrupti explicabo laboriosam, dolores voluptatem ab
+                    corporis est minus!</p>
+                <hr>
+                <div class="wrapper1">
+                    <span>Total-Quantity</span>
+                    <ul class="ul">
+                        <li>
+                            {{getAllDataWithOwnId?.quantity}}
+                        </li>
+                    </ul>
+                    <span>Add-Quantity</span>
+                    <div class="quantity-wrapper1 my-2">
+                        <span>-</span>
+                        0
+                        <span>+</span>
+                    </div>
+                    <button type="button" class="btn btn1 d-flex justify-content-center">Add To Cart</button>
+                </div>
+                <hr>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="fontAwesome">
+                                <i class="fa-sharp fa-solid fa-handshake"></i>
+                                <span>24/7 Gurantee</span>
+                                <div>Support-Gurantee</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="fontAwesome">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>60-Days-Protection</span>
+                                <div>Money Back Gurantee</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="fontAwesome">
+                                <i class="fa-sharp fa-solid fa-money-check-dollar"></i>
+                                <span>Easy-Payment</span>
+                                <div>Debit/Credit Card</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 d-flex justify-content-center" *ngFor="let item of getAllDatafromProductService">
+            <div class="wrapper" *ngIf="item.category === 'Latest' ">
+                <div class="card card1 mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img [src]="url+item.ProductImages[0].ProductImageUrl" class="img-fluid img1" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <span class="card-title1">{{item.productName}}</span>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <a class="btn" (click)="reDirectSingleProductPage(item._id)">View-Cart</a>
+                                <!-- <a class="btn" routerLink="/View-Cart/{{item._id}}">View-Cart</a> -->
+
+
+                                <i class="fa-sharp fa-solid fa-cart-shopping red pointer" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
