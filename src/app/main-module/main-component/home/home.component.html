@@ -107,7 +107,7 @@
                               </div>
                               <!--------------------------------------------------------------------- Product-View-1 ---------------------------> 
                             <div class="row"> 
-                                <div class="col-lg-4 col-md-6 d-flex justify-content-center" *ngFor="let item of ProductArray | paginate: { itemsPerPage: 8, currentPage: p }">
+                                <div class="col-lg-4 col-md-6 d-flex justify-content-center" *ngFor="let item of ProductArray | paginate: { itemsPerPage: 9, currentPage: p }">
                                     <div class="wrapper" *ngIf="productView === true">
                                         <div class="card card1" style="width: 18rem;" >
                                             <img [src]="Url+item.ProductImages[1].ProductImageUrl" class="card-img-top cardImg1" alt="...">
