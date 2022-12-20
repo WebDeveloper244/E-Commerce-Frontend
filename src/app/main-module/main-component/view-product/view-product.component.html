@@ -6,7 +6,7 @@
 <!-------------------------------------------------------------------- view-product  -->
 <div class="container">
     <div class="row">
-        <div class="col-md-4">
+        <!-- <div class="col-md-4">
 
             <div class="main-Image d-flex justify-content-center">
                 <img [src]="url+getAllDataWithOwnId?.ProductImages[0].ProductImageUrl" srcset="" class="w-100">
@@ -19,6 +19,28 @@
                 </div>
 
             </div>
+        </div> -->
+        <div class="col-md-4 my-3">
+            <div class="gallery" *ngFor="let images of getAllDataWithOwnId?.ProductImages">
+                <input type="radio" checked="checked" name="select" [id]="url+images._id">
+                <label class="inline" [for]="url+images._id"
+                    [ngStyle]="{ 'background-image': 'url(' + url+images.ProductImageUrl + ')'}"></label>
+                <img [src]="url+images.ProductImageUrl">
+
+
+                <!-- <input type="radio" checked="checked" name="select" id="img-tab-1">
+                <label for="img-tab-1"
+                    style="background-image: url(https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjc5NjV9&auto=format&fit=crop&w=2550&q=80);"></label>
+                <img src="https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjc5NjV9&auto=format&fit=crop&w=2550&q=80"
+                    border="0">
+
+                <input type="radio" name="select" id="img-tab-2">
+                <label for="img-tab-2"
+                    style="background-image: url(https://images.unsplash.com/photo-1558981359-219d6364c9c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60);"></label>
+                <img src="https://images.unsplash.com/photo-1558981359-219d6364c9c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+                    border="0"> -->
+            </div>
+
         </div>
         <div class="col-md-8">
             <div class="content">
