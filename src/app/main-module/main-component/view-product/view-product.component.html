@@ -63,9 +63,10 @@
                     </ul>
                     <span>Please Select Size</span>
                     <div class="cat action" *ngFor="let data of getAllDataWithOwnId.size">
-                        <label class="">
+                        <label class="" >
                             <input type="checkbox" [value]="data" (click)="getSizes($event)"><span>{{data}}</span>
                         </label>
+                        
                     </div>
                     <span>Add-Quantity</span>
                     <div class="quantity-wrapper1 my-2">
