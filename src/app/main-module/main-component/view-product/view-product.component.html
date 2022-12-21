@@ -61,13 +61,21 @@
                             {{getAllDataWithOwnId?.quantity}}
                         </li>
                     </ul>
+                    <span>Please Select Size</span>
+                    <div class="cat action" *ngFor="let data of getAllDataWithOwnId.size">
+                        <label class="">
+                            <input type="checkbox" [value]="data" (click)="getSizes($event)"><span>{{data}}</span>
+                        </label>
+                    </div>
                     <span>Add-Quantity</span>
                     <div class="quantity-wrapper1 my-2">
-                        <span>-</span>
-                        0
-                        <span>+</span>
+                        <button (click)="decreaseQuantity()">-</button>
+                        {{selctedQuantity}}
+                        <button (click)="increaseQuantity()">+</button>
                     </div>
                     <button type="button" class="btn btn1 d-flex justify-content-center">Add To Cart</button>
+                    <button type="button" class="btn btn1 d-flex justify-content-center">View-Cart</button>
+
                 </div>
                 <hr>
                 <div class="container">

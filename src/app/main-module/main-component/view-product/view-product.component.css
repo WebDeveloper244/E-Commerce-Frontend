@@ -145,6 +145,13 @@
     background-color: #f3f3f3;
 }
 
+button {
+    width: 37px;
+    border: 1px solid red;
+    border-radius: 0px;
+    background-color: #ffffff00;
+}
+
 .btn1 {
     margin-left: 0px;
     margin-top: 12px;
@@ -173,58 +180,70 @@
     color: #282727;
     margin-top: -5px;
 }
+
 /*------------------------>> Button <<---------------------------------*/
-.btn{
+.btn {
     background: rgb(255, 255, 255);
     color: rgb(255, 0, 0);
     border-radius: 0%;
     border-color: red;
+    width: 128px;
 }
-.btn:hover{
+
+.btn:hover {
     background: rgb(255, 0, 0);
     color: rgb(255, 255, 255);
     border-radius: 0%;
 }
-.btn:focus{
+
+.btn:focus {
     box-shadow: none;
 }
-  
+
 
 /*********************************************card 2 */
-.fa-cart-shopping{
+.fa-cart-shopping {
     margin-left: 94px;
     font-size: 21px;
     cursor: pointer;
 }
-.fa-cart-shopping:hover{
-    
+
+.fa-cart-shopping:hover {
+
     color: #fff !important;
     text-shadow:
-    0 0 6px #ff0101	,
-    0 0 6px #ff0101	,
-    0 0 6px #ff0101	,
-    0 0 6px #ff0101	,
-    0 0 6px #ff0101	,
-    0 0 6px #ff0101	;
-   
-      -moz-transition: all 0.2s ease-out;
+        0 0 6px #ff0101,
+        0 0 6px #ff0101,
+        0 0 6px #ff0101,
+        0 0 6px #ff0101,
+        0 0 6px #ff0101,
+        0 0 6px #ff0101;
+
+    -moz-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
     -webkit-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
 }
-.red{
+
+.red {
     color: red;
-};
-.pointer{
+}
+
+;
+
+.pointer {
     cursor: pointer;
 }
+
 /**************************************************************** Quality Card */
-.card1{
+.card1 {
     width: 100%;
 }
-.card1>img{
+
+.card1>img {
     width: 16%;
-} 
+}
+
 .card1 {
     margin-top: 45px;
     overflow: hidden;
@@ -277,6 +296,7 @@
         height: 100%;
     }
 }
+
 /******************************************************************************************************** Product-view  */
 .gallery {
     display: grid;
@@ -289,13 +309,13 @@
     max-width: 700px;
     margin: 0 auto;
     transition: all 150ms linear;
-  }
-  
-  .gallery input[type="radio"] {
+}
+
+.gallery input[type="radio"] {
     display: none;
-  }
-  
-  .gallery label {
+}
+
+.gallery label {
     position: relative;
     display: block;
     padding-bottom: 60%;
@@ -304,9 +324,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
-  }
-  
-  .gallery label:before {
+}
+
+.gallery label:before {
     border: 1px solid #e3e3e3;
     content: '';
     position: absolute;
@@ -314,9 +334,9 @@
     right: -5px;
     bottom: -5px;
     top: -5px;
-  }
-  
-  .gallery img {
+}
+
+.gallery img {
     display: none;
     grid-column-start: 1;
     grid-column-end: 5;
@@ -325,15 +345,69 @@
     width: 100%;
     transition: all 150ms linear;
     height: 45vh;
-  }
-  
-  .gallery input[name="select"]:checked + label + img {
+}
+
+.gallery input[name="select"]:checked+label+img {
     display: inline-block;
-  }
-  
-  .gallery input[name="select"]:checked + label:before {
+}
+
+.gallery input[name="select"]:checked+label:before {
     border: 1px solid #000;
-  }
-  /* .inline{
-     display: inline-block !important ;
-  } */
+}
+
+/************************************************ Checked-button  ******************/
+
+.cat {
+    margin: 4px;
+    background-color: transparent;
+    border-radius: 0px;
+    border: 1px solid rgb(0, 0, 0);
+    overflow: hidden;
+    /* float: right; */
+    cursor: pointer;
+}
+
+.cat label {
+    /* float: left;  */
+    /* line-height: 3.0em; */
+    width: 3em;
+    /* height: 3.0em; */
+    display: inline-block !important;
+}
+
+.cat label span {
+    text-align: center;
+    padding: 3px 0;
+    display: block;
+    cursor: pointer;
+}
+
+.cat label input {
+    position: absolute;
+    display: none;
+    color: black !important;
+    cursor: pointer;
+}
+
+/* selects all of the text within the input element and changes the color of the text */
+.cat label input+span {
+    color: black;
+}
+
+
+/* This will declare how a selected input will look giving generic properties */
+.cat input:checked+span {
+    color: #ffffff !important;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+}
+
+
+/*
+  This following statements selects each category individually that contains an input element that is a checkbox and is checked (or selected) and chabges the background color of the span element.
+  */
+
+.action input:checked+span {
+    background-color: rgb(0, 0, 0);
+}
+
+;

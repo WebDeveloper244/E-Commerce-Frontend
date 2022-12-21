@@ -15,6 +15,9 @@ export class ViewProductComponent implements OnInit {
   public getProductsId: any;
   public getAllDataWithOwnId: object | ProductInterface | any = {}
   public getAllDatafromProductService: any
+  public selectedSizes: any =[];
+  public totalQuantity :Number|any ;
+  public selctedQuantity :Number|any =0;
 
   constructor(private ActivatedRoute: ActivatedRoute,
     private readonly getAllProductFrombackend: ProductApiService,
@@ -35,6 +38,7 @@ export class ViewProductComponent implements OnInit {
   public getProductService() {
     this.getAllProductFrombackend.getProductWithId(this.getProductsId).subscribe((response: any) => {
       this.getAllDataWithOwnId = response.Result
+      this.totalQuantity = this.getAllDataWithOwnId.quantity
     })
   }
   public getAllProduct() {
@@ -47,6 +51,28 @@ export class ViewProductComponent implements OnInit {
     this.Router.navigate(['View-Product',_id]);
   }
 
+  public getSizes(event:any) {
+    if (event.target.checked) {
+      this.selectedSizes.push(event.target.value);
+    }
+    else {
+      this.selectedSizes = this.selectedSizes.filter((value: any) => value != event.target.value);
+    }
+    console.log(this.selectedSizes);
+    
+  }
+
+  public decreaseQuantity(){
+    if(this.selctedQuantity > 0){
+        this.selctedQuantity --
+    }
+      
+  }
+  public increaseQuantity(){
+     if(this.selctedQuantity < this.totalQuantity){
+        this.selctedQuantity++
+     }
+  }
 
 
 }
