@@ -20,14 +20,13 @@
 
             </div>
         </div> -->
-        <div class="col-md-4 my-3">
+        <div class="col-md-4 my-3" >
             <div class="gallery" *ngFor="let images of getAllDataWithOwnId?.ProductImages">
                 <input type="radio" checked="checked" name="select" [id]="url+images._id">
                 <label class="inline" [for]="url+images._id"
                     [ngStyle]="{ 'background-image': 'url(' + url+images.ProductImageUrl + ')'}"></label>
                 <img [src]="url+images.ProductImageUrl">
-
-
+                
                 <!-- <input type="radio" checked="checked" name="select" id="img-tab-1">
                 <label for="img-tab-1"
                     style="background-image: url(https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjc5NjV9&auto=format&fit=crop&w=2550&q=80);"></label>
@@ -42,7 +41,7 @@
             </div>
 
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8 d-flex justify-content-center">
             <div class="content">
                 <h1>{{getAllDataWithOwnId?.productName}}</h1>
                 <hr>
@@ -62,11 +61,12 @@
                         </li>
                     </ul>
                     <span>Please Select Size</span>
-                    <div class="cat action" *ngFor="let data of getAllDataWithOwnId.size">
-                        <label class="" >
-                            <input type="checkbox" [value]="data" (click)="getSizes($event)"><span>{{data}}</span>
-                        </label>
-                        
+                    <div class="d-flex justify-content-center">
+                        <div class="cat action" *ngFor="let data of getAllDataWithOwnId.size">
+                            <label class="" >
+                                <input type="checkbox" [value]="data" (click)="getSizes($event)"><span>{{data}}</span>
+                            </label>
+                        </div>
                     </div>
                     <span>Add-Quantity</span>
                     <div class="quantity-wrapper1 my-2">
@@ -107,7 +107,7 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <!-- <div class="row">
         <div class="col-lg-6 d-flex justify-content-center" *ngFor="let item of getAllDatafromProductService">
             <div class="wrapper" *ngIf="item.category === 'Latest' ">
                 <div class="card card1 mb-3" style="max-width: 540px;">
@@ -121,7 +121,7 @@
                                 <p class="card-text">This is a wider card with supporting text below as a natural
                                     lead-in to additional content. This content is a little bit longer.</p>
                                 <a class="btn" (click)="reDirectSingleProductPage(item._id)">View-Cart</a>
-                                <!-- <a class="btn" routerLink="/View-Cart/{{item._id}}">View-Cart</a> -->
+                                <a class="btn" routerLink="/View-Cart/{{item._id}}">View-Cart</a>
 
 
                                 <i class="fa-sharp fa-solid fa-cart-shopping red pointer" data-bs-toggle="offcanvas"
@@ -132,5 +132,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
