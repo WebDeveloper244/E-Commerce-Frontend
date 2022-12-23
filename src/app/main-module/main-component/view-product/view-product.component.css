@@ -363,16 +363,11 @@ button {
     border-radius: 0px;
     border: 1px solid rgb(0, 0, 0);
     overflow: hidden;
-    /* float: right; */
     cursor: pointer;
 }
 
 .cat label {
-    /* float: left;  */
-    /* line-height: 3.0em; */
     width: 3em;
-    /* height: 3.0em; */
-    /* display: inline-block !important; */
 }
 
 .cat label span {
@@ -408,6 +403,10 @@ button {
 
 .action input:checked+span {
     background-color: rgb(0, 0, 0);
-}
+};
 
-;
+/*************************************** Off-Canvas  */
+.offcanvas.show:not(.hiding), .offcanvas.showing{
+    background-color: #0d0d0da3;
+     color: white;
+}
