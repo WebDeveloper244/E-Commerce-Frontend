@@ -2,6 +2,8 @@ import { ProductInterface } from './../../../shared-service/productInterface/pro
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductApiService } from 'src/app/shared-service/product-api/product-api.service';
+import {ToastrService } from 'ngx-toastr';
+import { TimeScale } from 'chart.js';
 
 
 @Component({
@@ -18,16 +20,19 @@ export class ViewProductComponent implements OnInit {
   public selectedSizes: any =[];
   public totalQuantity :Number|any ;
   public selctedQuantity :Number|any =0;
+  public offCanvasRight = '';
+  public alert : boolean = false
 
   constructor(private ActivatedRoute: ActivatedRoute,
     private readonly getAllProductFrombackend: ProductApiService,
-    private readonly Router:Router
+    private readonly Router:Router,
+    private readonly toaster:ToastrService
     ) { }
 
   ngOnInit(): void {
     this.callingMyActivatedRoute()
     this.getProductService()
-    this.getAllProduct()
+    // this.getAllProduct()
   }
 
   public callingMyActivatedRoute() {
@@ -41,11 +46,11 @@ export class ViewProductComponent implements OnInit {
       this.totalQuantity = this.getAllDataWithOwnId.quantity
     })
   }
-  public getAllProduct() {
-    this.getAllProductFrombackend.getProduct().subscribe((response: any) => {
-      this.getAllDatafromProductService = response.Result
-    })
-  }
+  // public getAllProduct() {
+  //   this.getAllProductFrombackend.getProduct().subscribe((response: any) => {
+  //     this.getAllDatafromProductService = response.Result
+  //   })
+  // }
 
   public reDirectSingleProductPage(_id: any) {
     this.Router.navigate(['View-Product',_id]);
@@ -72,6 +77,20 @@ export class ViewProductComponent implements OnInit {
      if(this.selctedQuantity < this.totalQuantity){
         this.selctedQuantity++
      }
+  }
+  public AddToCart(){
+    if(this.selectedSizes.length <= 0){
+       this.toaster.error("Please Select Size First")
+       this.alert=true
+    }
+    else if(this.selctedQuantity <= 0){
+      this.toaster.error("Please Add Quantity First")
+      this.alert=false
+    }
+    else{
+      this.offCanvasRight = 'offcanvas'
+      this.alert=false
+    }
   }
 
 
