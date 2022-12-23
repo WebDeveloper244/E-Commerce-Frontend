@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductApiService } from 'src/app/shared-service/product-api/product-api.service';
 import {ToastrService } from 'ngx-toastr';
-import { TimeScale } from 'chart.js';
 
 
 @Component({
@@ -80,11 +79,11 @@ export class ViewProductComponent implements OnInit {
   }
   public AddToCart(){
     if(this.selectedSizes.length <= 0){
-       this.toaster.error("Please Select Size First")
+       this.toaster.error("Please Select Size First 👈👈")
        this.alert=true
     }
     else if(this.selctedQuantity <= 0){
-      this.toaster.error("Please Add Quantity First")
+      this.toaster.error("Please Add Quantity First 👈👈")
       this.alert=false
     }
     else{
