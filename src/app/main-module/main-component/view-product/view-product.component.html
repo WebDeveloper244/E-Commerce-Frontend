@@ -74,7 +74,7 @@
                     <span>Add-Quantity</span>
                     <div class="quantity-wrapper1 my-2">
                         <button class="button" (click)="decreaseQuantity()">-</button>
-                        {{selctedQuantity}}
+                        {{selectedQuantity}}
                         <button class="button" (click)="increaseQuantity()">+</button>
                     </div>
                     <button class="button" type="button" class="btn btn1 d-flex justify-content-center"
@@ -155,7 +155,7 @@
             [alt]="getAllDataWithOwnId?.productName" class="img-thumbnail rounded-0 border border-danger">
             <div class="quantity-wrapper1 my-2 ms-2">
                 <button class="button text-white" (click)="decreaseQuantity()">-</button>
-                {{selctedQuantity}}
+                {{selectedQuantity}}
                 <button class="button text-white" (click)="increaseQuantity()">+</button>
             </div>
         </div>
