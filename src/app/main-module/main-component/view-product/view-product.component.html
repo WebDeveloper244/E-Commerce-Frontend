@@ -20,13 +20,13 @@
 
             </div>
         </div> -->
-        <div class="col-md-4 my-3" >
+        <div class="col-md-4 my-3">
             <div class="gallery" *ngFor="let images of getAllDataWithOwnId?.ProductImages">
-                <input type="radio" checked="checked" name="select" [id]="url+images._id">
-                <label class="inline" [for]="url+images._id"
-                    [ngStyle]="{ 'background-image': 'url(' + url+images.ProductImageUrl + ')'}"></label>
-                <img [src]="url+images.ProductImageUrl">
-                
+                <input type="radio" checked="checked" name="select" [id]="url+images?._id">
+                <label class="inline" [for]="url+images?._id"
+                    [ngStyle]="{ 'background-image': 'url(' + url+images?.ProductImageUrl + ')'}"></label>
+                <img [src]="url+images?.ProductImageUrl">
+
                 <!-- <input type="radio" checked="checked" name="select" id="img-tab-1">
                 <label for="img-tab-1"
                     style="background-image: url(https://images.unsplash.com/photo-1558981000-f294a6ed32b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjc5NjV9&auto=format&fit=crop&w=2550&q=80);"></label>
@@ -66,22 +66,23 @@
                     <span>Please Select Size</span>
                     <div class="d-flex justify-content-center">
                         <div class="cat action" *ngFor="let data of getAllDataWithOwnId.size">
-                            <label class="" >
+                            <label class="">
                                 <input type="checkbox" [value]="data" (click)="getSizes($event)"><span>{{data}}</span>
                             </label>
                         </div>
                     </div>
                     <span>Add-Quantity</span>
                     <div class="quantity-wrapper1 my-2">
-                        <button (click)="decreaseQuantity()">-</button>
+                        <button class="button" (click)="decreaseQuantity()">-</button>
                         {{selctedQuantity}}
-                        <button (click)="increaseQuantity()">+</button>
+                        <button class="button" (click)="increaseQuantity()">+</button>
                     </div>
-                    <button type="button" class="btn btn1 d-flex justify-content-center" [attr.data-bs-toggle]="offCanvasRight"
-                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" (click)="AddToCart()">Add To Cart</button>
-                    <button type="button" class="btn btn1 d-flex justify-content-center" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">View-Cart</button>
-
+                    <button class="button" type="button" class="btn btn1 d-flex justify-content-center"
+                        [attr.data-bs-toggle]="offCanvasRight" data-bs-target="#offcanvasScrolling"
+                        aria-controls="offcanvasScrolling" (click)="AddToCart()">Add To Cart</button>
+                    <button class="button" type="button" class="btn btn1 d-flex justify-content-center"
+                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+                        aria-controls="offcanvasScrolling">View-Cart</button>
                 </div>
                 <hr>
                 <div class="container">
@@ -140,12 +141,22 @@
     </div> -->
 </div>
 <!--------------------------------------- Off-Canvas  -->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-    <div class="offcanvas-header">
-      <h5 id="offcanvasRightLabel">Offcanvas right</h5>
-      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+    <div class="offcanvas offcanvas-end bg-dark text-white" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+        id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Product-Details</h5>
+            <h4><i class="fa-sharp fa-solid fa-xmark text-white" role="button" data-bs-dismiss="offcanvas"
+                aria-label="Close"></i></h4>
+        </div>
+        <hr>
+        <div class="offcanvas-body">
+            <img [src]="url+getAllDataWithOwnId?.ProductImages[0].ProductImageUrl" 
+            [alt]="getAllDataWithOwnId?.productName" class="img-thumbnail rounded-0 border border-danger">
+            <div class="quantity-wrapper1 my-2 ms-2">
+                <button class="button text-white" (click)="decreaseQuantity()">-</button>
+                {{selctedQuantity}}
+                <button class="button text-white" (click)="increaseQuantity()">+</button>
+            </div>
+        </div>
     </div>
-    <div class="offcanvas-body">
-      ...
-    </div>
-  </div>
