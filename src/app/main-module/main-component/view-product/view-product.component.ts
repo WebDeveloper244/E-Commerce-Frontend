@@ -21,7 +21,7 @@ export class ViewProductComponent implements OnInit {
   public totalQuantity: Number | any;
   public selectedQuantity: Number | any = 0;
   public offCanvasRight = '';
-  public alert: boolean = false
+  public cart:any=[]
 
   constructor(private ActivatedRoute: ActivatedRoute,
     private readonly getAllProductFrombackend: ProductApiService,
@@ -91,15 +91,12 @@ export class ViewProductComponent implements OnInit {
   public AddToCart() {
     if (this.selectedSizes.length <= 0) {
       this.toaster.error("Please Select Size First 👈👈")
-      this.alert = true
     }
-    else if (this.selectedQuantity <= 0) {
-      this.toaster.error("Please Add Quantity First 👈👈")
-      this.alert = false
-    }
+    // else if (this.selectedQuantity <= 0) {
+    //   this.toaster.error("Please Add Quantity First 👈👈")
+    //   this.alert = false
+    // }
     else {
-      this.offCanvasRight = 'offcanvas'
-      this.alert = false
       let {_id, category, color, companyName, description, price, productName, quantity} = this.getAllDataWithOwnId
       let processedCartObject = {
         productID:_id,
@@ -117,9 +114,15 @@ export class ViewProductComponent implements OnInit {
       }
       cartArray.push(processedCartObject)
       this.loacalStorageData.saveDataToLocalStorage(cartArray)
-      
-      
+      this.offCanvasRight = 'offcanvas'
     }
+    this.getCart();
+  }
+
+  public getCart(){
+    this.cart = this.loacalStorageData.getDataToLocalStorage()
+    console.log(this.cart);
+    
   }
 
 
