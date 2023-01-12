@@ -118,6 +118,36 @@ export class ViewProductComponent implements OnInit {
     }
     this.getCart();
   }
+  public deleteCanvasProduct(id:any){
+   let cartFromLocalStorage = this.loacalStorageData.getDataToLocalStorage();
+   let updatedCart = cartFromLocalStorage.filter((obj:any)=> obj.productID !== id)
+   this.loacalStorageData.saveDataToLocalStorage(updatedCart)
+   this.getCart();
+
+  }
+  public increaseQuantityCanvas(productID:any){
+    let cartFromLocalStorage = this.loacalStorageData.getDataToLocalStorage();
+      cartFromLocalStorage.find((obj:any)=>{
+      if(obj.productID === productID && obj.quantity > obj.selectedQuantity){
+        obj.selectedQuantity++
+        this.loacalStorageData.saveDataToLocalStorage(cartFromLocalStorage)
+      }
+    }) 
+    this.getCart()
+  }
+  public decreaseQuantityCanvas(productID:any){
+    let cartFromLocalStorage = this.loacalStorageData.getDataToLocalStorage();
+    cartFromLocalStorage.find((obj:any)=>{
+    if(obj.productID === productID && obj.selectedQuantity > 0){
+      obj.selectedQuantity--
+      this.loacalStorageData.saveDataToLocalStorage(cartFromLocalStorage)
+    }
+  }) 
+  this.getCart()
+  }
+  public viewCart(){
+    this.getCart()
+  } 
 
   public getCart(){
     this.cart = this.loacalStorageData.getDataToLocalStorage()

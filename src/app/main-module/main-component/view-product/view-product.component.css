@@ -332,16 +332,35 @@
 
 .action input:checked+span {
     background-color: rgb(0, 0, 0);
-};
+}
+
+;
+
 /*************************************** Off-Canvas  */
-.black{ 
+.black {
     background-color: rgba(0, 0, 0, 0.815) !important;
 }
-.offcanvas{
+
+.offcanvas {
     background-color: rgba(0, 0, 0, 0.781) !important;
 }
-.img-thumbnail{
+
+.img-thumbnail {
     height: 122px;
     width: 130px;
-  }
+    position: relative;
+    margin-bottom: 15px;
+}
 
+.fa-sharp1 {
+    margin-left: 135px;
+    margin-top: -4px;
+    position: absolute;
+    cursor: pointer;
+}
+.fa-square-xmark{
+    color: #f5d142;
+}
+.fa-square-xmark:hover{
+    color: #ecc00f;
+}

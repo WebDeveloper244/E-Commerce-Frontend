@@ -71,7 +71,7 @@
                         aria-controls="offcanvasScrolling" (click)="AddToCart()">Add To Cart</button>
                     <button class="button" type="button" class="btn btn1 d-flex justify-content-center"
                         data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
-                        aria-controls="offcanvasScrolling">View-Cart</button>
+                        aria-controls="offcanvasScrolling" (click)="viewCart()">View-Cart</button>
                 </div>
                 <hr>
                 <div class="container">
@@ -149,14 +149,16 @@
                 <button class="button text-white" (click)="increaseQuantity()">+</button>
             </div> -->
             <div *ngFor="let data of cart">
-                <div>
+                <div class="mb-3">
+                    <div class="fa-sharp1">
+                        <i class="fa-sharp fa-solid fa-square-xmark" (click)="deleteCanvasProduct(data.productID)"></i>
+                    </div>
                     <img [src]="url+data?.imageUrl" 
             [alt]="data?.productName" class="img-thumbnail rounded-0 border border-danger">
             <div class="quantity-wrapper1 my-2 ms-2">
-                <button class="button text-white" (click)="decreaseQuantity()">-</button>
+                <button class="button text-white" (click)="decreaseQuantityCanvas(data.productID)">-</button>
                 {{data.selectedQuantity}}
-                <button class="button text-white" (click)="increaseQuantity()">+</button>
-            </div>
+                <button class="button text-white" (click)="increaseQuantityCanvas(data.productID)">+</button>
                 </div>
             </div>
         </div>
