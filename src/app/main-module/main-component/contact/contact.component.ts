@@ -33,7 +33,9 @@ export class ContactComponent implements OnInit {
     console.log(formvalue);
 
     this.emailService.sendEmail(formvalue).subscribe((data:any)=>{
-      console.log(data);
+     let result = data.message
+     console.log(result);
+     
       
     })
     
