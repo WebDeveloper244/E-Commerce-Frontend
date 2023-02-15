@@ -5,12 +5,15 @@ body { margin: 0; font-family: poppins, }
 /* You can add global styles to this file, and also import other style files */
 
 
+
 input.ng-invalid.ng-touched {
-    border: 2px solid red;
+  border: 2px solid red;
+  animation: shake 300ms
 }
 
 textarea.ng-invalid.ng-touched {
-  border: 2px solid red;
+border: 2px solid red;
+animation: shake 300ms
 }
 
 input.ng-valid.ng-touched{
@@ -23,12 +26,25 @@ border: 2px solid green;
 
 select.ng-invalid.ng-touched {
 border: 2px solid red;
+animation: shake 300ms
 }
 
 select.ng-valid.ng-touched{
 border: 2px solid green;
 }
-.form-control:focus{
-    box-shadow: none;
-   
+
+*{
+font-family: 'Fira Sans', sans-serif;
+}
+
+@keyframes shake {
+25% {
+    transform: translateX(4px)
+}
+50% {
+    transform: translateX(-4px)
+}
+75% {
+    transform: translateX(4px)
+}
 }
