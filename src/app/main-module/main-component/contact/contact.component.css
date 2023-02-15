@@ -99,7 +99,3 @@ input{
 input:focus{
     box-shadow: none
 }
-textarea:focus{
-box-shadow: none;
-border-color: aqua;
-}
