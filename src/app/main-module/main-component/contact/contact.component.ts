@@ -38,7 +38,7 @@ export class ContactComponent implements OnInit {
      let result = data.message
      this.toaster.success(result)
      console.log(result);
-     
+     this.emailForm.reset()
       
     })
     
