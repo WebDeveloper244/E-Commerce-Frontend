@@ -36,10 +36,9 @@ export class ContactComponent implements OnInit {
 
     this.emailService.sendEmail(formvalue).subscribe((data:any)=>{
      let result = data.message
-     this.toaster.success(result)
+     this.toaster.success(result);
      console.log(result);
-     this.emailForm.reset()
-      
+     this.emailForm.reset();
     })
     
   }
