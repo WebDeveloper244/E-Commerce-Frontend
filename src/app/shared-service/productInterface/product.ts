@@ -15,4 +15,4 @@ Status:number;
 CreateDate:string;
 createdAt:string;
 updatedAt:string;
-}
+};
