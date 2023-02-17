@@ -53,9 +53,7 @@ export class HomeComponent implements OnInit {
   // })
   // }
 
-
-
-  // *********************************** ReDirect on Single Product Page **************************//
+  // *********************************** ReDirect on Single Product Page 
   reDirectSingleProductPage(_id: any) {
     this.Router.navigate(['View-Product',_id]);
   }
