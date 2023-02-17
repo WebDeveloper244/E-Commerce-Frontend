@@ -45,7 +45,7 @@ export class HomeComponent implements OnInit {
   }
   // *********************************** grid list view **************************//
 
-  // *********************************** get produt with categories **************************//
+  // *********************************** get produt with categories 
 
   // getproductName(companyName:any){
   // this.getProductDatafromservice.getProductByCompanyName(companyName).subscribe((res:any)=>{
