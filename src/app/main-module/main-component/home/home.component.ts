@@ -43,7 +43,6 @@ export class HomeComponent implements OnInit {
   viewProduct1() {
     this.productView = false
   }
-  // *********************************** grid list view **************************//
 
   // *********************************** get produt with categories 
 
