@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormBuilder, FormControl, Validators } from '@angular/forms';
+import {  ToastrService } from 'ngx-toastr';
 import { ProductApiService } from 'src/app/shared-service/product-api/product-api.service';
 
 @Component({
@@ -12,8 +13,8 @@ export class ContactComponent implements OnInit {
 
   constructor(
     private readonly FormBuilder:FormBuilder,
-    private readonly emailService:ProductApiService
-    p
+    private readonly emailService:ProductApiService,
+    private readonly toaster:ToastrService
   ) { 
     this.emailFormInitialization()
   }
@@ -35,6 +36,7 @@ export class ContactComponent implements OnInit {
 
     this.emailService.sendEmail(formvalue).subscribe((data:any)=>{
      let result = data.message
+     this.toaster.success(result)
      console.log(result);
      
       
